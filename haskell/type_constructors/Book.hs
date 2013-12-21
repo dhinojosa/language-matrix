@@ -1,5 +1,5 @@
--- Type classes must be capitalized
--- Book is the value constructor
+-- Type constructor must be capitalized
+-- Book is the value constructor or the data constructor
 -- Int, String, and [String] are components of the type
 
 data BookInfo = Book Int String [String] 
@@ -20,9 +20,9 @@ myInfo = Book 9780135072455 "Algebra of Programming"
 type CustomerID = Int
 type ReviewBody = String
 
--- Another Type Class
+-- Another Type Class but using BookInfo (a type constructor) 
 data BetterReview = BetterReview BookInfo CustomerID ReviewBody deriving (Show)	 
-	 		    
+
 -- Creating a Book Review Type Class with other type classes and aliases
 data BookReview = BookReview BookInfo CustomerID String deriving (Show)    
 
