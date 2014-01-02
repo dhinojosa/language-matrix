@@ -53,3 +53,10 @@ def steve = new Employee("Steve", "Jobs")
 assert(steve.firstName == "Steve")
 assert(steve.lastName == "Jobs") 
 
+/**
+ * Using a map to create an object using the keyword 'as'
+ */
+def sergei = [firstName:"Sergei", lastName:"Brin"] as Employee
+assert(sergei.firstName == "Sergei")
+assert(sergei.lastName == "Brin")
+
