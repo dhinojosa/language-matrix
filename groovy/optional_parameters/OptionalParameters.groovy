@@ -9,7 +9,7 @@ assert(log(1024, 2) == 10.0)
 
 
 /**
- * name is untyped, details is a String array
+ * Name is untyped, Details is a String Array can be used as a varargs
  */
 def task(name, String[] details) {
   return "$name - $details"
@@ -17,4 +17,7 @@ def task(name, String[] details) {
 
 assert((task ('Call Mom', '200-122-1222')) == 'Call Mom - [200-122-1222]')
 assert((task ('Call Dad', '914-456-7890 (Work)', '202-122-3002 (Cell)')) == 'Call Dad - [914-456-7890 (Work), 202-122-3002 (Cell)]')
-assert((task 'Check Mail') == "Check Mail")
+assert((task ('Check Mail')) == "Check Mail")
+
+
+
