@@ -25,9 +25,34 @@
   (println "f2: before let v:" v)
   ; creates local binding v that shadows a global binding
   (let [v 2]
-    ;local binding only works within this let statement
+    ; local binding only works within this let statement
+    ; let creates a lexically scoped immutable alias for a value
     (println "f2: in let, v:" v)
     (f1))
   ; out of the let, v refers again to the global binding
   (println "f2: after let v:" v))
+
+(defn f3 []
+  (println "f3: before binding v:" v)
+  ; same global binding with new, temporary value
+  ; binding creates a dynamically scoped binding for a Var only
+  (binding [v 3]
+    ;global binding, new value
+    (println "f3: with binding function v" v)
+    (f1)) ; calling f1 with the new value of v
+  ;outside of the binding v, referring to the first global value
+  (println "f3: after binding v:" v))
+
+(defn f4 []
+  (def v 4)) ;change the value of v in the global scope
+
+(println "(= v 1) => " (= v 1))
+(println "Calling f2: ")
+(f2)
+(println)
+(f3)
+(println)
+(println "Calling f4: ")
+(f4)
+(println "after calling f4, v = " v)
 
