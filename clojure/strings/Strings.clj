@@ -1,3 +1,5 @@
+; Surrounding in Double quotes (") designates a String
+
 (println "Standard String") ; printing a regular string
 
 (println "Multiline String without needing 
