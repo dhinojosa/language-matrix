@@ -12,3 +12,7 @@
 (assert (= (var x) #'x))
 (assert (= (var funx) #'user/funx))
 (assert (= (var funx) #'funx))
+
+;vars can be alias into their own namespaces
+;vars can contain metadata for documentation, type hints, and unit tests
+;vars can rebound on a per-thread basis
