@@ -14,7 +14,7 @@
 ; The #'user namespace had this automatically, but since we are using
 ; a different namespace, we have to declare 'use
 
-(clojure.core/use 'clojure.core) 
+(clojure.core/use 'clojure.core)
 
 ; println would not work if we didn't declare that we wanted to use `clojure.core.
 ; 'x is nil since we are in a different namespace
