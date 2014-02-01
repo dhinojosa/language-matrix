@@ -34,27 +34,27 @@
 (assert (= (keyword? :hello) true))
 (assert (= (symbol? 'hello) true))
 
-; The full signature of a method is 
+; The full signature of a function is 
 ; (defn name doc-string? attr-map? [params*] body)
 
 (defn greeting                                         ; This is the greeting definition
-   "Returns a greeting of the form 'Hello, username.'" ; This is the documentation of the method
-   [username]                                          ; This is a vector of a arguments for the method
-   (str "Hello, " username)                            ; This is the implementation of the method
+   "Returns a greeting of the form 'Hello, username.'" ; This is the documentation of the function
+   [username]                                          ; This is a vector of a arguments for the function
+   (str "Hello, " username)                            ; This is the implementation of the function
 )
 
 (assert (= (greeting "Jasmine") "Hello, Jasmine"))
 
-; Each method can have alternate calls
+; Each function can have alternate calls
 (defn greeting2                                        ; This is the greeting definition
-  "Returns a greeting of the form 'Hello, username.'"  ; This is the documentation of the method
+  "Returns a greeting of the form 'Hello, username.'"  ; This is the documentation of the function
   ([] (greeting2 "world"))                             ; This is one call, calling without arguments
   ([username] (str "Hello, " username)))               ; This is an alternate call, calling with a username
 
 (assert (= (greeting2 "Bob") "Hello, Bob"))
 (assert (= (greeting2) "Hello, world"))
 
-; Each method can variable parameters, varargs in other languages
+; Each function can variable parameters, varargs in other languages
 ; The & will bind extra variable to the name provided
 
 (use '[clojure.string :only (join)])                   ; Requires a the join function from the clojure string package
@@ -67,3 +67,5 @@
 
 (assert (= (state-info "New Mexico", "Santa Fe", "Albuquerque", "Las Cruces", "Taos") 
            "State: New Mexico; Capital: Santa Fe; Major Cities: Albuquerque, Las Cruces, Taos"))
+
+
