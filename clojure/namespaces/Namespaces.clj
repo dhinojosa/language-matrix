@@ -9,7 +9,7 @@
 
 ; Switch namespaces
 
-(in-ns 'foons)
+(in-ns 'foo-ns)
 
 ; The #'user namespace had this automatically, but since we are using
 ; a different namespace, we have to declare 'use
@@ -27,7 +27,7 @@
 
 ; Should resolve since we declared another x in another namespace
 
-(assert (= (resolve 'x) #'foons/x)) 
+(assert (= (resolve 'x) #'foo-ns/x)) 
 
 ; When switching to a new namespace the java.lang package will automatically be available
 ; Therefore this next statement can be shortened
@@ -37,3 +37,24 @@
 ; to
 
 (assert (= (. Math abs -40) 40))
+
+; When you require a Java package you must import, import is only required for Java classes
+(import '(java.net URL))
+(def cnn (new URL "http://www.cnn.com"))
+(assert (= (.getHost cnn) "www.cnn.com"))
+
+; To bring in a var from another namespace, you must use the fully qualified name or map
+; the name onto the new namespace
+(require 'clojure.set)
+(assert (= (clojure.set/difference
+              #{:eggs :milk :ranch-dressing} 
+              #{:milk :bell-peppers :eggs})) #{:ranch-dressing})
+
+; To bring in a var and create an alias you can use the :as keyword
+
+(require '[clojure.set :as cs])
+(assert (= (cs/union
+              #{:eggs :milk :ranch-dressing} 
+              #{:milk :bell-peppers :eggs})) #{:eggs :milk})
+
+
