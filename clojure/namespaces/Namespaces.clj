@@ -57,4 +57,16 @@
               #{:eggs :milk :ranch-dressing} 
               #{:milk :bell-peppers :eggs})) #{:eggs :milk})
 
+; This is how to declare a namespace to use while adding all clojure requirements
+; and java imports
 
+(ns bar-ns
+  (:require [clojure.test :as ct])
+  (:import (java.io.File)))
+
+(ct/is (= 4 (+ 2 2)))
+(assert (instance? java.io.File (new java.io.File "~/bob.txt")))
+
+(def j 10)
+(assert (= (resolve 'j) #'bar-ns/j)) ; check to ensure that it is indeed 
+                                     ; in the bar-ns namespace
