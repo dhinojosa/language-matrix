@@ -29,7 +29,8 @@
 
 (assert (= (resolve 'x) #'foo-ns/x)) 
 
-; When switching to a new namespace the java.lang package will automatically be available
+; When switching to a new namespace the java.lang package 
+; will automatically be available
 ; Therefore this next statement can be shortened
 
 (assert (= (. java.lang.Math abs -40) 40))
@@ -38,13 +39,18 @@
 
 (assert (= (. Math abs -40) 40))
 
-; When you require a Java package you must import, import is only required for Java classes
+; When you require a Java package you must import, 
+; import is only required for Java classes
 (import '(java.net URL))
 (def cnn (new URL "http://www.cnn.com"))
 (assert (= (.getHost cnn) "www.cnn.com"))
 
-; To bring in a var from another namespace, you must use the fully qualified name or map
+; To bring in a var from another namespace, you must use the 
+; fully qualified name or map
 ; the name onto the new namespace
+;
+; IMPORTANT: When you require a library, clojure will look for a file named
+; in this next example as clojure/set.clj in the CLASSPATH
 (require 'clojure.set)
 (assert (= (clojure.set/difference
               #{:eggs :milk :ranch-dressing} 
