@@ -5,6 +5,7 @@
  * If you don’t specify an access modifier, attributes are assumed to be private,
  *    and methods are assumed to be public.
  */
+ 
 class Employee {
   //Fields are already encapsulated, getters and setters are automatically created
   String firstName, lastName
