@@ -1,9 +1,21 @@
 ; Functions are first-class objects. That is, functions can be created at
 ;   runtime, passed around, returned, and in general used like any other
 ;   datatype.
-; Data is immutable.
-; Functions are pure; that is, they have no side effects.
+; 
+; When creating your own functions it is good practice to use 
+; Clojure Parameter convention
+;
+; `a` A Java array
+; `agt` An agent
+; `coll` A collection
+; `expr` An expression
+; `f` A function
+; `idx` Index
+; `r` A ref
+; `v` A vector
+; `val` A value
 
+;
 ; This is a function that is created in clojure
 
 (defn average
