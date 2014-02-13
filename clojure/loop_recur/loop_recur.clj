@@ -1,12 +1,7 @@
-; Loops work like get, where the loop establishes bindings
+; Loops work like `let`, where the loop establishes bindings
 ; and a recursion point at the top of the loop
 ; it then then evaluates all expressions
-(def x 
-  (loop [result [] x 5]
-    (if (zero? x)
-      result
-       (recur (conj result x) (dec x)))))
-
+; recur will then return to the loop that precedes it.
 
 (def y 
   (loop [e 5]
@@ -19,4 +14,15 @@
   )
 )
 
-(assert (= x [5 4 3 2 1]))
+(assert (= y 0))
+
+; Recur can also be used with a `defn` where recur will return to the
+; `defn` declaration. Note that the `defn` receives a vector of 
+; parameters whereas loop contains a vector of bindings
+
+(defn my-reduce [total v]
+  (if (= (count v) 0) total
+      (recur (+ total (first v)) (rest v))
+  )
+)
+(assert (= 15 (my-reduce 0 [1 2 3 4 5])))
