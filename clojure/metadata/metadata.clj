@@ -37,4 +37,20 @@
 (defn ^{:tag String} piglatin [^{:tag String} s]
   (str (apply str (rest s)) (first s) "ay"))
 
+(println (meta #'piglatin)) ; verify it on the console
 (assert (= (piglatin "rocky") "ockyray"))
+
+
+; Creating :tag metadata can be used in the short form ^<classname>
+(defn ^String piglatin-2 [^String s]
+  (str (apply str (rest s)) (first s) "ay"))
+
+(println (meta #'piglatin-2)) ; verify it on the console
+
+; If you so care to, you can place the metadata information at the end
+(defn piglatin-3 [s]
+  (str (apply str (rest s)) (first s) "ay") 
+  {:tag String})
+
+(println (meta #'piglatin-2)) ; verify it on the console
+
