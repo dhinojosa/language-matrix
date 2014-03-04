@@ -25,6 +25,11 @@
 (assert (= (rest [3 4 5 6]) [4 5 6]))
 (assert (= (first [5 6 7 9]) 5))
 
+; maps are seq-able
+;
+(def contact-info {:first-name "Elvis" :last-name "Presley" :address "Graceland" :city "Memphis" :state "TN"})
+
+
 ; Operations that return collections are different 
 ; depending on the collection being operated on.
 
@@ -36,3 +41,7 @@
 
 ; An operation on a set returns a clojure.lang.APersistentMap$KeySeq
 (assert (= (. (class (rest #{1 2 3 4})) getName) "clojure.lang.APersistentMap$KeySeq"))
+
+
+
+
