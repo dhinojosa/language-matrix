@@ -30,9 +30,26 @@
 (def elvis {:first-name "Elvis" :last-name "Presley" :middle-name "Aaron"})
 
 (let [{fname :first-name lname :last-name} elvis]
-  (assert (= fname "Elvis")
-          (= lname "Presley")))
+  (assert (and (= fname "Elvis")
+               (= lname "Presley"))))
 
+
+; The above used `fname` and `lname` to show destructuring but mostly
+; it used with the same name, this essentially converts keywords to variables
+(let [{first-name :first-name last-name :last-name} elvis]
+  (assert (and (= first-name "Elvis")
+               (= last-name "Presley"))))
+
+; The last two examples are so used that there is a directive that creates variable
+(let [{:keys [first-name last-name]} elvis]
+  (assert (and (= first-name "Elvis")
+               (= last-name  "Presley"))))
+
+; The :as on a list binds a variable to an entire list in the groceries example above,
+; but it can also be bound to an entire map
+; (let [{:keys [first-name last-name] :as king-of-rock-and-roll} elvis]
+;   (assert (and (= first-name "Elvis")
+;                (= last-name  "Presley"))))
 
 
 ; (defn find-all-by-first-name
