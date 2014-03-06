@@ -47,9 +47,32 @@
 
 ; The :as on a list binds a variable to an entire list in the groceries example above,
 ; but it can also be bound to an entire map
-; (let [{:keys [first-name last-name] :as king-of-rock-and-roll} elvis]
-;   (assert (and (= first-name "Elvis")
-;                (= last-name  "Presley"))))
+(let [{:keys [first-name last-name] :as king-of-rock-and-roll} elvis]
+  (assert (and (= first-name "Elvis")
+               (= last-name  "Presley"))
+               (= king-of-rock-and-roll elvis)))
+
+; Destructuring can contain default values if some are not available
+(let [{:keys [first-name last-name age] :or {age 0}} elvis]
+   (assert (and (= first-name "Elvis")
+                (= last-name "Presley")
+                (= age 0))))
+
+; Destructuring with all options available options
+(let [{:keys [first-name last-name age] :or {age 0} :as king-of-rock-and-roll} elvis]
+   (assert (and (= first-name "Elvis")
+                (= last-name "Presley")
+                (= age 0)
+                (= king-of-rock-and-roll elvis))))
+
+; Destructuring a nested map
+(def elvis {:first-name "Elvis" :last-name "Presley" :middle-name "Aaron"
+            :address {:name "Graceland" :line1 "3734 Elvis Presley Blvd."
+                      :line2 nil :city "Memphis" :state "TN" :zip-code "38116"}})
+
+(let [{first-name :first-name {home-name :name} :address} elvis]
+    (assert (and (= first-name "Elvis")
+                 (= home-name "Graceland"))))
 
 
 ; (defn find-all-by-first-name
