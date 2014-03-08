@@ -4,11 +4,21 @@
 
 (def albuquerque [35.1107 106.61])
 
-; See let/let.clj for details
-(let [[a b] albuquerque]
-  (assert (and (= a 35.1107)
-               (= b 106.61))))
+; Destructuring breaks apart a vector and binds variables to be used in
+; a block. It can be done in a let and in a defn
+; see let/let.clj for details
 
+(let [[lat lon] albuquerque]
+  (assert (and (= lat 35.1107)
+               (= lon 106.61))))
+
+; Using destructuring in a defn
+(defn format-coordinate
+      "Format a given coordinate as a String"
+      [[lat lon]]
+   (str lat "°N " lon "°S"))
+
+(assert (= (format-coordinate albuquerque) "35.1107°N 106.61°S"))
 
 ; Destructuring a vector with an arg vector
 (def grocery-vector ["Eggs" "Milk" "Lettuce" "Spinach" "Pork Chops"])
@@ -17,6 +27,14 @@
    (assert (and (= a "Eggs")
                 (= b "Milk")
                 (= others ["Lettuce" "Spinach" "Pork Chops"]))))
+
+; Destructuring a vector in an defn
+(require '[clojure.string :as cs])
+(defn format-grocery-list-1 
+   "Format a grocery list with the first two elements, and the rest"
+   [[a b & others]]
+   (str a " and " b ". If you have time get: " (cs/join ", " others)))
+(assert (= (format-grocery-list-1 grocery-vector) "Eggs and Milk. If you have time get: Lettuce, Spinach, Pork Chops"))
 
 ; Using an :as keyword can be used as an alias for the entire vector, especially
 ; after destructuring
@@ -120,24 +138,3 @@
                 (= score2 102.0)
                 (= other-scores [92.5 91.0 70.2 103.0 104.0])))
 )
-
-; (defn find-all-by-first-name
-;   "find all records of a vector given a firstName"
-;   [person, people-vector]
-;   (filter #(= (:first-name %) (:first-name person)) people-vector))
-; 
-; (defn find-all-by-first-name-with-destructuring
-;   "find all records of a vector given a firstName but with destructuring"
-;   [{fname :first-name}, people-vector]
-;   (filter #(= fname (:first-name %)) people-vector))
-; 
-; (def hendrix {:first-name "Jimi" :last-name "Hendrix"})
-; 
-; (def performers [{:first-name "Jimmy" :last-name "Page"}
-;                  {:first-name "Janis" :last-name "Joplin"}
-;                  hendrix
-;                  {:first-name "Jim" :last-name "Morrison"}])
-; 
-; (assert (= (find-all-by-first-name hendrix performers) (vector hendrix)))
-; 
-; (assert (= (find-all-by-first-name-with-destructuring hendrix performers) (vector hendrix)))
