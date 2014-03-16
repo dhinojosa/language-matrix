@@ -198,7 +198,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis nested map extractin the first-anme and the home name from the address"
+   "Format the elvis nested map extracting the first-anme and the home name from the address"
    [{:keys [first-name] {:keys [name]} :address}]
    (str "Elvis' first name was " first-name
         ". His home name was "
