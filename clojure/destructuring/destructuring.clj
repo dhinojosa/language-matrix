@@ -236,12 +236,24 @@
                 (= score2 102.0)))
 )
 
+; Destructuring the previous example in a defn
+(defn top-two-scores [{first-name :first-name [score1 score2] :scores}]
+    [first-name score1 score2])
+
+(assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0])
+
 ; Destructuring map with :keys and vectors
 (let [{:keys [first-name last-name] [score1 score2] :scores} honor-student]
    (assert (and (= first-name "Albert")
                 (= score1 88.6)
                 (= score2 102.0)))
 )
+
+; Destructuring the previous example in a defn
+(defn top-two-scores [{:keys [first-name last-name] [score1 score2] :scores}]
+    [first-name last-name score1 score2])
+
+(assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0])
 
 ; Destructuring map with :keys and vectors with & with the rest of the list
 (let [{:keys [first-name last-name] [score1 score2 & other-scores] :scores} honor-student]
@@ -250,3 +262,9 @@
                 (= score2 102.0)
                 (= other-scores [92.5 91.0 70.2 103.0 104.0])))
 )
+
+; Destructuring the previous example in a defn
+(defn top-two-scores [{:keys [first-name last-name] [score1 score2 & other-scores] :scores}]
+    [first-name last-name score1 score2 other-scores])
+
+(assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0 [92.5 91.0 70.2 103.0 104.0]])
