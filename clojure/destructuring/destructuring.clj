@@ -48,7 +48,7 @@
 
 ; Using an :as keyword in a defn
 (defn format-grocery-list
-   "Format a grocery list with the first two elements, and the rest"
+   "Format a grocery list with the first two elements, and the rest, include the full-list"
    [[a b & others :as all-groceries]]
    (str "Out of the entire list of " (cs/join ", " all-groceries) "; obtain most importantly " 
         a " and " b ". If you have time get " (cs/join ", " others)))
@@ -67,7 +67,7 @@
 
 ; Destructuring a map in a defn
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map with the first name and last name only"
    [{fname :first-name lname :last-name}]
    (str "Elvis' first name was " fname " and his last was " lname))
 
@@ -82,7 +82,7 @@
 ; Destructuring the previous example in a defn
 
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map with first name and last name only"
    [{first-name :first-name last-name :last-name}]
    (str "Elvis' first name was " first-name " and his last was " last-name))
 
@@ -98,7 +98,7 @@
 ; Destructuring the previous example in a defn
 
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map with the first name and last name only"
    [{:keys [first-name last-name]}]
    (str "Elvis' first name was " first-name " and his last was " last-name))
 
@@ -115,14 +115,13 @@
 ; Destructuring the previous example in a defn
 
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map and also include the full list"
    [{:keys [first-name last-name] :as king-of-rock-and-roll}]
    (str "Elvis' first name was " first-name
         " and his last was " last-name ". Map size was "
         (count king-of-rock-and-roll) "."))
 
 (assert (= (format-elvis elvis) "Elvis' first name was Elvis and his last was Presley. Map size was 3."))
-
 
 ; Destructuring can contain default values if some are not available
 (let [{:keys [first-name last-name age] :or {age 0}} elvis]
@@ -132,7 +131,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map and create a default for age"
    [{:keys [first-name last-name age] :or {age 0}}]
    (str "Elvis' first name was " first-name " and his last was " last-name ". His age is " age "."))
 
@@ -148,7 +147,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis map"
+   "Format the elvis map, include a default an age of 0, and include the full map"
    [{:keys [first-name last-name age] :or {age 0} :as king-of-rock-and-roll}]
    (str "Elvis' first name was " first-name " and his last was "
         last-name ". His age is " age ". Map size was "
@@ -167,7 +166,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis nested map"
+   "Format the elvis nested map picking only the first name and the home name from the address"
    [{first-name :first-name {home-name :name} :address}]
    (str "Elvis' first name was " first-name
         ". His home name was "
@@ -184,7 +183,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis nested map"
+   "Format the elvis nested map extracting the first name and the home name from the address"
    [{first-name :first-name {:keys [name]} :address}]
    (str "Elvis' first name was " first-name
         ". His home name was "
@@ -199,7 +198,7 @@
 
 ; Destructuring the previous example in a defn
 (defn format-elvis
-   "Format the elvis nested map"
+   "Format the elvis nested map extractin the first-anme and the home name from the address"
    [{:keys [first-name] {:keys [name]} :address}]
    (str "Elvis' first name was " first-name
         ". His home name was "
@@ -220,7 +219,8 @@
                (= c3 \O))))
 
 ; Destructuring the previous example in a defn
-(defn tic-toe-diagonal [[[a1 a2 a2]
+(defn tic-toe-diagonal "Get the diagonal values from upper left to lower right"
+                       [[[a1 a2 a2]
                          [b1 b2 b3]
                          [c1 c2 c3]]]
   [a1 b2 c3])
@@ -237,8 +237,10 @@
 )
 
 ; Destructuring the previous example in a defn
-(defn top-two-scores [{first-name :first-name [score1 score2] :scores}]
-    [first-name score1 score2])
+(defn top-two-scores 
+   "Get the first name of an honor student and the first two scores"
+   [{first-name :first-name [score1 score2] :scores}]
+   [first-name score1 score2])
 
 (assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0])
 
@@ -250,8 +252,10 @@
 )
 
 ; Destructuring the previous example in a defn
-(defn top-two-scores [{:keys [first-name last-name] [score1 score2] :scores}]
-    [first-name last-name score1 score2])
+(defn top-two-scores
+      "Get the first name and the last name of an honor student and the first two scores"
+      [{:keys [first-name last-name] [score1 score2] :scores}]
+      [first-name last-name score1 score2])
 
 (assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0])
 
@@ -264,7 +268,9 @@
 )
 
 ; Destructuring the previous example in a defn
-(defn top-two-scores [{:keys [first-name last-name] [score1 score2 & other-scores] :scores}]
-    [first-name last-name score1 score2 other-scores])
+(defn top-two-scores
+      "Get the first name, last-name of an honor student, the first two scores, and the rest"
+      [{:keys [first-name last-name] [score1 score2 & other-scores] :scores}]
+      [first-name last-name score1 score2 other-scores])
 
 (assert (top-two-scores honor-student) ["Albert" "Einstein" 88.6 102.0 [92.5 91.0 70.2 103.0 104.0]])
