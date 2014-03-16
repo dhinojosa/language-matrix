@@ -182,10 +182,30 @@
     (assert (and (= first-name "Elvis")
                  (= name "Graceland"))))
 
+; Destructuring the previous example in a defn
+(defn format-elvis
+   "Format the elvis nested map"
+   [{first-name :first-name {:keys [name]} :address}]
+   (str "Elvis' first name was " first-name
+        ". His home name was "
+        name "."))
+
+(assert (= (format-elvis elvis) "Elvis' first name was Elvis. His home name was Graceland."))
+
 ; Destructuring the outer and inner map together
 (let [{:keys [first-name] {:keys [name]} :address} elvis]
     (assert (and (= first-name "Elvis")
                  (= name "Graceland"))))
+
+; Destructuring the previous example in a defn
+(defn format-elvis
+   "Format the elvis nested map"
+   [{:keys [first-name] {:keys [name]} :address}]
+   (str "Elvis' first name was " first-name
+        ". His home name was "
+        name "."))
+
+(assert (= (format-elvis elvis) "Elvis' first name was Elvis. His home name was Graceland."))
 
 ; Destructuring nested vectors
 (def tic-tac-toe [[\X \O \X]
@@ -198,6 +218,14 @@
   (assert (and (= a1 \X)
                (= b2 \O)
                (= c3 \O))))
+
+; Destructuring the previous example in a defn
+(defn tic-toe-diagonal [[[a1 a2 a2]
+                         [b1 b2 b3]
+                         [c1 c2 c3]]]
+  [a1 b2 c3])
+
+(assert (tic-toe-diagonal tic-tac-toe) [\X \O \O])
 
 ; Destructuring both maps and vectors
 (def honor-student {:first-name "Albert" :last-name "Einstein" :scores [88.6 102.0 92.5 91.0 70.2 103.0 104.0]})
