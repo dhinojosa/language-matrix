@@ -12,5 +12,6 @@
 ; If you don't quote it the first element must be a function, 
 ; macro or java class or a special form
 
-
-; Typically vectors are used in place of list as a collection, and lists are used to evaluate functions.
+; Typically vectors are used in place of list as a collection, and lists are used to evaluate functions
+;
+; A list is a collection and therefore is subject to all sequenceable functions
