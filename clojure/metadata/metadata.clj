@@ -62,17 +62,24 @@
 (assert (:tag (meta #'piglatin) "String"))
 (assert (= (piglatin "rocky") "ockyray"))
 
-
 ; Creating :tag metadata can be used in the short form ^<classname>
 (defn ^String piglatin-2 [^String s]
   (str (apply str (rest s)) (first s) "ay"))
 
-(println (meta #'piglatin-2)) ; verify it on the console
+
+; The above generates a metadata of:
+;  {:ns #<Namespace user>, :name piglatin-2, 
+;   :file /home/danno/development/language-matrix/clojure/metadata/metadata.clj,
+;   :column 1, :line 66, :tag java.lang.String, :arglists ([s])}
+;   
+;   When using ^String, the class is actually returned.  Here we call
+;   getName() for the class.
+(assert (= (. (:tag (meta #'piglatin-2)) getName) "java.lang.String"))
+
 
 ; If you so care to, you can place the metadata information at the end
 (defn piglatin-3 [s]
-  (str (apply str (rest s)) (first s) "ay") 
+  (str (apply str (rest s)) (first s) "ay")
   {:tag String})
 
-(println (meta #'piglatin-2)) ; verify it on the console
-
+(assert (:tag (meta #'piglatin-3) "String"))
