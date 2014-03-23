@@ -1,6 +1,6 @@
 ; Metadata is data that is orthogonal with the code. Metadata's
 ; relationship with the code is immutable.
-; 
+;
 ; Metadata can either be used by the compiler, external systems. 
 ; Metadata is about the symbol or collection.  Some important
 ; point to consider:
@@ -71,7 +71,7 @@
 ;  {:ns #<Namespace user>, :name piglatin-2, 
 ;   :file /home/danno/development/language-matrix/clojure/metadata/metadata.clj,
 ;   :column 1, :line 66, :tag java.lang.String, :arglists ([s])}
-;   
+;
 ;   When using ^String, the class is actually returned.  Here we call
 ;   getName() for the class.
 (assert (= (. (:tag (meta #'piglatin-2)) getName) "java.lang.String"))
