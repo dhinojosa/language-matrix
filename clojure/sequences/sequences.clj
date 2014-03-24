@@ -1,14 +1,15 @@
 ; A list, set, map are sequences and can be operated on
-; by a common set of functions.  Keep in mind that all 
-; sequence functions may return an `ISeq`, a java representation 
-; of a `Seq` (sequence) pronounced 'Seek'
+; by a common set of sequence functions.  Keep in mind that all 
+; sequence functions will return an `ISeq`, a java representation 
+; of a `Seq` (sequence) pronounced 'Seek'.  `Seq` looks much like a list
+; on the console but it is indeed an implementation of a `Seq`
 ;
 ; first obtains the first element
 (assert (= (first '(1 2 3 4 5)) 1))
 
 ; rest obtains the collection minus the first element
 ; the seq function will return a `seq` of any sequence.
-(assert (= (rest #{1 2 3 4 5}) (seq #{4 3 2 5})))
+(assert (= (rest #{1 2 3 4 5}) '(4 3 2 5)))
 
 ; cons will append an element depending on the collectiona
 (assert (= (cons 3 '(4 5 6 7)) '(3 4 5 6 7)))
@@ -17,18 +18,20 @@
 (assert (= (seq '()) nil))
 
 ; `next` is the equivalent of (seq(rest aseq))
-(assert (= (next #{1 2 3 4 5}) (seq #{2 3 4 5})))
+(assert (= (count (next #{1 2 3 4 5})) 4))
 
 ; vectors are seq-able
-(assert (= (cons 3 [4 5 6 7]) [3 4 5 6 7]))
-(assert (= (rest [3 4 5 6]) [4 5 6]))
+(assert (= (cons 3 [4 5 6 7]) '(3 4 5 6 7)))
+(assert (= (rest [3 4 5 6]) '(4 5 6)))
 (assert (= (first [5 6 7 9]) 5))
 
 ; maps are seq-able
 (def contact-info {:first-name "Elvis" :last-name "Presley" :address "Graceland" :city "Memphis" :state "TN"})
+(assert (= (count (cons [:middle-name "Aaron"] contact-info)) 6))
 
-; Operations that return collections are different 
+; Operations that return `Seq`  are different 
 ; depending on the collection being operated on.
+; In the end though, they are `Seq`
 
 ; An operation on a list returns a clojure.lang.PersistentList
 (assert (= (. (class (rest '(1 2 3 4))) getName) "clojure.lang.PersistentList"))

@@ -32,7 +32,8 @@
 
 (assert (= (:diamondbacks national-league) nil))
 
-; Unfortunately you can have a value of `nil` in a map and it would be ambiguous since it can either mean it is not in the map, or the value is actually `nil`
+; Unfortunately you can have a value of `nil` in a map and it would be ambiguous 
+; since it can either mean it is not in the map, or the value is actually `nil`
 
 (assert (= (:expos national-league) nil)) ; nil is actually not a value
 
