@@ -11,7 +11,7 @@
 ; the seq function will return a `seq` of any sequence.
 (assert (= (rest #{1 2 3 4 5}) '(4 3 2 5)))
 
-; cons will append an element depending on the collectiona
+; cons will append an element depending on the collections
 (assert (= (cons 3 '(4 5 6 7)) '(3 4 5 6 7)))
 
 ; `seq` will return nil if the collection is empty
@@ -52,5 +52,6 @@
 (def star-trek-characters (sorted-set "Spock" "Kirk" "Worf" "Picard" "Riker"))
 (assert (first star-trek-characters) "Spock")
 
-(def band-hometowns (sorted-map :depeche-mode :basildon :the-cure :crawley :talking-heads :providence))
-(assert (first band-hometowns) [:depeche-mode :basildon])
+(def band-hometowns (sorted-map :depeche-mode "basildon" :the-cure "crawley" :talking-heads "providence"))
+(assert (first band-hometowns) [:depeche-mode "basildon"])
+
