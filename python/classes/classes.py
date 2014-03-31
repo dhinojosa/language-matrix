@@ -31,3 +31,4 @@ print (Counter.count)
 """You can retrieve the doc of the class by calling __doc__"""
 print(Counter.__doc__)
 
+"""Variable state that 
