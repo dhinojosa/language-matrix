@@ -94,3 +94,41 @@
 (assert (= (:cardinals (merge-with concat more-national-league
                                           national-football-conference)
                        ["St. Louis Cardinals" "Arizona Cardinals"])))
+
+; a "nested associative structure" is a structure like maps, vectors or lists 
+; inside of a map vector or list, where as an element
+; can be retrieved using a key or index
+
+(def major-league-baseball-championships
+  {:american-league {:red-sox 8
+                     :yankees 27
+                     :athletics 9
+                     :tigers 4
+                     :orioles 3}
+
+   :national-league {:giants 7
+                     :cardinals 11
+                     :reds 5
+                     :pirates 5
+                     :dodgers 6}})
+
+; to dig into a nested associative structure like a map you can use `get-in`
+
+(assert (get-in major-league-baseball-championships [:national-league :reds]) 5)
+
+; to change the number of championships for the athletics, you can use assoc-in and it returns a new copy.
+
+(assert (get-in (assoc-in major-league-baseball-championships [:american-league :athletics] 10) [:american-league :athletics]) 10)
+
+; a "nested associative structure can be a map of lists" and assoc-in can be used with the index
+; it we wanted to see who is in first place in the american league central we can call get-in
+
+(def major-league-baseball-standings
+  {:american-league {:east [:yankees :orioles :red-sox :rays :blue-jays]
+                     :central [:tigers :royals :white-sox :twins :indians]
+                     :west [:athletics :rangers :angels :mariners :astros]}
+   :national-league {:east [:braves :nationals :mets :marlins :phillies]
+                     :central [:brewers :cardinals :reds :cubs :pirates]
+                     :west [:giants :rockies :dodgers :padres :diamondbacks]}})
+
+(assert (get-in major-league-baseball-standings [:american-league :central 0]) :tigers)
