@@ -124,11 +124,11 @@
 ; it we wanted to see who is in first place in the american league central we can call get-in
 
 (def major-league-baseball-standings
-  {:american-league {:east [:yankees :orioles :red-sox :rays :blue-jays]
+  {:american-league {:east    [:yankees :orioles :red-sox :rays :blue-jays]
                      :central [:tigers :royals :white-sox :twins :indians]
-                     :west [:athletics :rangers :angels :mariners :astros]}
-   :national-league {:east [:braves :nationals :mets :marlins :phillies]
+                     :west    [:athletics :rangers :angels :mariners :astros]}
+   :national-league {:east    [:braves :nationals :mets :marlins :phillies]
                      :central [:brewers :cardinals :reds :cubs :pirates]
-                     :west [:giants :rockies :dodgers :padres :diamondbacks]}})
+                     :west    [:giants :rockies :dodgers :padres :diamondbacks]}})
 
 (assert (get-in major-league-baseball-standings [:american-league :central 0]) :tigers)
