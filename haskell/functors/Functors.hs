@@ -11,6 +11,5 @@ instance Functor' Maybe where
 data Employee { id :: String
               , firstName :: String
               , lastName :: String
-	      , phone :: String
-	      } deriving (Show)
-
+              , phone :: String
+              } deriving (Show)

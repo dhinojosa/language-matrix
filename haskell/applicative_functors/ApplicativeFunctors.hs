@@ -9,11 +9,10 @@ class (Functor' f) => Applicative' f where
    pure'  :: a -> f a
    (<**>) :: f (a -> b) -> f a -> f b
 
-:instance Applicative' Maybe where
-   pure' x = Just x
-   (<**>) Nothing Nothing = Nothing
-   (<**>) Just(
-
+instance Applicative' Maybe where
+   pure' a = Just
+   Nothing <**> _ = Nothing
+   (Just f) <**> something = fmap f something
 
 
 
