@@ -48,7 +48,12 @@
 
 (await-for 3000 counter)
 
+; send-off will send a function off to an agent in a separate thread pool that will possibly block
+; these can be used inside a transaction and is used often as a follow up side effect after
+; updating an agent
+
+(def log-agent (agent (System/out)))
+
+(send-off log-agent #(.println % "One Message"))
+
 (shutdown-agents) ; Shuts down agents before terminating the JVM
-
-
-
