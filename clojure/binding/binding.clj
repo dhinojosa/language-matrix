@@ -9,7 +9,7 @@
 (assert (= x 3))
 
 ; binding will re-bind the var into another value inside of
-; for a different form context. This will perform anything with in the binding
+; for a different form context. This will perform anything within the binding
 ; in parallel which differs from `let`. You can't do it this though
 ; if the root binding is not declared dynamic as it will throw a
 ; `IllegalStateException`
@@ -29,7 +29,7 @@
 (binding [y 5]
   (assert (= y 5)))
 
-; bindings can also redefine methods
+; bindings can also redefine dynamic bound methods
 
 (defn ^:dynamic max-1 [a b] (max a b))
 
