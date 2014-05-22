@@ -19,7 +19,7 @@
      (+ x 5))
    (catch IllegalStateException e (.getMessage e)))
 
-; the remedy to the situation declare the root binding with 
+; the remedy to the situation declare the root binding with
 ; the ^:dynamic macro annotation
 
 (def ^:dynamic y 3)
@@ -28,6 +28,9 @@
 
 (binding [y 5]
   (assert (= y 5)))
+
+(let [y 4] 
+  (assert (= y 4)))
 
 ; bindings can also redefine dynamic bound methods
 
@@ -39,3 +42,7 @@
 
 (binding [max-1 max-2]
   (assert (= (max-1 1 3) 1)))
+
+; Every binding is only visible to the thread that it runs on
+(binding [y 10] 
+   (.start (Thread. #(assert (= y 3)))))
