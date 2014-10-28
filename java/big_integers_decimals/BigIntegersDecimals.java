@@ -23,6 +23,5 @@ public class BigIntegersDecimals {
       BigInteger typicalMaxInteger = new BigInteger("2147483647");
 
       assert(typicalMaxInteger.equals(new BigInteger("2147483647")));
-
    }
 }
