@@ -1,6 +1,5 @@
 import Control.Exception.Base (assert) -- required to make assertions
 
-
 -- There is a function in Haskell called _function application_
 -- The signature for function application is:
 --     ($) :: (a -> b) -> a -> b
@@ -45,6 +44,6 @@ multiplyBy2 x = x * 2
 --    0       |                  |                 | $, $!, `seq`
 
 main = do
-          putStrLn $ show $ multiplyBy2 3 + 4
-          putStrLn $ show $ multiplyBy2 (3 + 4)
-          putStrLn $ show $ multiplyBy2 $ 3 + 4
+         putStrLn $ show $ multiplyBy2 3 + 4    -- 10
+         putStrLn $ show $ multiplyBy2 (3 + 4)  -- 14
+         putStrLn $ show $ multiplyBy2 $ 3 + 4  -- 14 (no parenthesis necessary)
