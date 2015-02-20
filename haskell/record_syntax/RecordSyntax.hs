@@ -18,6 +18,9 @@ data Employee = Worker {ssn :: SSN, firstName:: FirstName, middleName :: MiddleN
 
 main = do
          let johnTheWorkHorse = Worker "333-12-1200" "John" Nothing "Smith" ["1234 Amber Lane", "St. Louis", "MO"]
-         let bobTheBoss = Supervisor "124-55-3010" "Bob" Nothing "Ramirez" ["33 Main St.", "Skokie", "IL"] [johnTheWorkHorse]
+         let carlTheSlouch = Worker{ssn = "001-30-3032", addresses = ["803 Amber Lane", "Apt B", "Little Rock", "AR"], firstName = "Carl",
+                                    middleName = (Just "Landeau"), lastName = "McInroy"}
+         let bobTheBoss = Supervisor "124-55-3010" "Bob" Nothing "Ramirez" ["33 Main St.", "Skokie", "IL"] [johnTheWorkHorse, carlTheSlouch]
          putStrLn(firstName(johnTheWorkHorse))
          putStrLn(firstName(bobTheBoss))
+         putStrLn(firstName(carlTheSlouch))
