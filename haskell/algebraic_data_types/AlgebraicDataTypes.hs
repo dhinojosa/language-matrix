@@ -1,21 +1,25 @@
 -- Using an algebraic type to model alternate construction, in this case
 -- various ways to bill, `Show` is a type class that provides an
 -- automatic string descriptor.
+import Data.Maybe
 
-type CardHolder = String
-type CardNumber = String
-type Address = [String] -- Address is a list of String
-type CustomerID = Int
+type FirstName = String
+type LastName = String
+type MiddleName = Maybe String -- including Maybe type, which is an optional type
+type SSN = String
+type Address = [String]
 
-data BillingInfo = CreditCard CardNumber CardHolder Address
-                 | CashOnDelivery
-                 | Invoice CustomerID
-                   deriving (Show)
+data Employee = Worker SSN FirstName MiddleName LastName Address
+              | Supervisor SSN FirstName MiddleName LastName Address [Employee] deriving (Show)
+
+-- Using pattern matching, pattern_matching/PatternMatching.hs for more detail
+firstName :: Employee -> String
+firstName (Worker _ fst _ _ _)  = fst
+firstName (Supervisor _ fst _ _ _ _) = fst
+
 
 main = do
-       let creditCard = CreditCard "3333-1233-1200" "John Doe" 
-                                   ["1234 Amber Lane", "St. Louis", "MO"]
-       let invoice = Invoice 10
-
-       print creditCard
-       print invoice
+         let johnTheWorkHorse = Worker "333-12-1200" "John" Nothing "Smith" ["1234 Amber Lane", "St. Louis", "MO"]
+         let bobTheBoss = Supervisor "124-55-3010" "Bob" Nothing "Ramirez" ["33 Main St.", "Skokie", "IL"] [johnTheWorkHorse]
+         putStrLn(firstName(johnTheWorkHorse))
+         putStrLn(firstName(bobTheBoss))
