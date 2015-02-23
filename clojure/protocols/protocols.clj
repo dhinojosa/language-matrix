@@ -14,11 +14,11 @@
 
 (defn next-item [coll s] 
   (let [current (.indexOf coll s)]
-      (get coll (inc current))))
+      (coll (inc current))))
 
 (defn prev-item [coll s] 
   (let [current (.indexOf coll s)]
-      (get coll (dec current))))
+      (coll (dec current))))
 
 ; Establish the protocol with methods that are to be defined by
 ; other types, in our case, Employees and Soldiers.
