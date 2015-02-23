@@ -66,10 +66,11 @@
 (assert (= (greeting2 "Bob") "Hello, Bob"))
 (assert (= (greeting2) "Hello, world"))
 
-; Each function can variable parameters, varargs in other languages
+; Each function can contain variable parameters, called 
+; variadic functions. Similar to C++ ellipsis and Java's varargs
 ; The & will bind extra variable to the name provided
 
-(use '[clojure.string :only (join)])                   ; Requires a the join function from the clojure string package
+(use '[clojure.string :only (join)]); Requires the join function from the clojure string package
 (defn state-info 
    "Format a U.S. State with the name, 
     capital and major cities"
@@ -77,7 +78,22 @@
    (str "State: " statename "; Capital: " capital 
         "; Major Cities: " (join ", " major-cities)))
 
-(assert (= (state-info "New Mexico", "Santa Fe", "Albuquerque", "Las Cruces", "Taos") 
+(assert (= (state-info "New Mexico", "Santa Fe", "Albuquerque", 
+                       "Las Cruces", "Taos") 
            "State: New Mexico; Capital: Santa Fe; Major Cities: Albuquerque, Las Cruces, Taos"))
 
+; whole functions can be called as a higher order function, just accept the 
+; function as a parameter
+(defn op [f a b] (f a b))
 
+(assert (= (op + 4 2) 6))
+
+; partial takes a function f and fewer than the normal arguments to f, and
+; returns a fn that takes a variable number of additional args. When
+; called, the returned function calls f with args + additional args.
+
+(defn add3 [a b c] (+ a b c))
+
+(def add-last (partial add3 1 2))
+
+(assert (= (add-last 3) 6))
