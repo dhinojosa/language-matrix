@@ -15,6 +15,7 @@
 
 (println (let [x 6] (add-x 5)))
 
+; see more on dynamic at vars/vars.clj
 (def ^:dynamic x′ 10)
 
 (defn add-x′ [y′] (+ x′ y′))
