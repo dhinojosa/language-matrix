@@ -55,7 +55,9 @@ listTest2 = assert (([(*), (+)] <*> [1,2] <*> [5,4]) == [5, 4, 10, 8, 6, 5, 7, 6
 
 pure2Function = (pure 4 :: ((->) r) Int) 
 functionTest1 = assert ((pure2Function 4) == 4)  "Function Applicative Test 1: ✓"
-functionTest2 = assert (((+) <$> (+1) <*> (*10) $ 4) == 45) "Function Applicative Test 1: ✓"
+functionTest2 = assert (((+) <$> (+1) <*> (*10) $ 4) == 45) "Function Applicative Test 2: ✓"
+functionTest3 = assert (((\x y z -> [x,y,z]) <$> (+3) <*> (*2) <*> (/2) $ 5) == [8.0, 10.0, 2.5]) 
+                        "Function Applicative Test 3: ✓"
 
 -- Note the reason why (+1) <*> (*10) by itself will not work is:
 -- Given let z = (+1) <*> (*10) that will translate to (\x -> (+1) x ((*10) x))
@@ -73,3 +75,4 @@ main = do
          putStrLn $ listTest2
          putStrLn $ functionTest1
          putStrLn $ functionTest2
+         putStrLn $ functionTest3
