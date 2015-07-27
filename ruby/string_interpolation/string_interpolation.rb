@@ -1,3 +1,7 @@
+#Required to load assert, since ruby does not have a standard assert
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/..")
+require 'assert'
+
 # A String can be interpolated with a double quoted string
 # Given a couple variable assignments...
 
