@@ -9,8 +9,11 @@ For functions, Ruby has three different notions of function with
 differing behavior: [Blocks](#blocks), [Procs](#procs), and [Lambdas](#lambdas)  
 
 See [Methods](#methods) for methods that belong to an object
+
 See [Blocks](#blocks) for blocks
+
 See [Procs](#procs) for Proc objects
+
 See [Lambdas](#lambdas) for Lambda objects
 
 ## Lists
