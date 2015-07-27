@@ -10,4 +10,5 @@ def add_ingredients(*ing)
    ing.join(', ')
 end
 
-assert(add_ingredients("Milk", :Sugar, "Eggs", 14), "Milk, Sugar, Eggs, 14")
+assert(add_ingredients("Milk", :Sugar, "Eggs", 14),
+                       "Milk, Sugar, Eggs, 14")
