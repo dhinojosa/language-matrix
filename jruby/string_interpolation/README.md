@@ -1,5 +1,5 @@
 To run this example:
 
 ```
-jruby string_interpolation.rb
+jruby -I.. string_interpolation.rb
 ```

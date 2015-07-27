@@ -11,4 +11,5 @@ age = 76
 # Anything within the brackets will be replaced with the variable
 # values in the context.  Brackets are required!
 
-assert("His name was #{name} and he lived until he was #{age}", "His name was Albert Einstein and he lived until he was 76")
+assert("His name was #{name} and he lived until he was #{age}", 
+       "His name was Albert Einstein and he lived until he was 76")
