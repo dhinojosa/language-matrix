@@ -2,7 +2,7 @@
 # Given a couple variable assignments...
 
 name = "Albert Einstein"
-age = 87
+age = 76
 
 # It can be interpolated in the string with a hash and bracket
 # Anything within the brackets will be replaced with the variable
