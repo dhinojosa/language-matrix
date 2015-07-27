@@ -1,3 +1,6 @@
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/..")
+require 'assert'
+
 # A String can be interpolated with a double quoted string
 # Given a couple variable assignments...
 
@@ -8,4 +11,4 @@ age = 76
 # Anything within the brackets will be replaced with the variable
 # values in the context.  Brackets are required!
 
-puts "His name was #{name} and he lived until he was #{age}"
+assert("His name was #{name} and he lived until he was #{age}", "His name was Albert Einstein and he lived until he was 76")
