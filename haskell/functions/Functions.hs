@@ -25,5 +25,5 @@ fruits = rsz ["Apple", "Orange", "Tangelo", "Apricot", "Pomegranate"]
 -- therefore `a b c d` is `a b c))
 
 main = do
-         putStrLn $ show $ assert ((fruits !! 2) == "Orange") "Success"
+         putStrLn $ show $ assert (fruits !! 2 == "Orange") "Success"
          putStrLn $ show $ assert (myIsOdd 3 == True) "Success"
