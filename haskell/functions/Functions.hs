@@ -1,12 +1,12 @@
-import Data.List (sort,zip)
-import Control.Exception.Base (assert)
+import Data.List (sort)  -- required to sort and perform zips
+import Control.Exception.Base (assert) --required for assertions
 
 -- Functions can declare the types that will be used as 
 -- arguments.  In this case `isOdd` takes an Int type
 -- and returns a `Bool` type. `/=` determines if a number value
 -- is not equal
-disOdd :: Int -> Bool
-disOdd x = ((x `mod` 2) /= 0)
+myIsOdd :: Int -> Bool
+myIsOdd x = ((x `mod` 2) /= 0)
 
 
 -- function composition composes two or more functions into one. The function
@@ -21,9 +21,9 @@ fruits = rsz ["Apple", "Orange", "Tangelo", "Apricot", "Pomegranate"]
 -- a high precedence, the ($) operator has the lowest precedence. Normal 
 -- function application is also left-associative.  Given functions `f` `g`,
 -- and parameters `a` `b` `c`, `f g a b c` is the same as 
--- `f(g)(a b c)`.  Functional Application is right associative , 
+-- `f(g)(a b c)`.  Functional Application is right associative,
 -- therefore `a b c d` is `a b c))
 
 main = do
-         putStrLn (assert ((fruits !! 2) == "Orange")
-                  (assert (disOdd 3 == True) "Success"))
+         putStrLn $ show $ assert ((fruits !! 2) == "Orange") "Success"
+         putStrLn $ show $ assert (myIsOdd 3 == True) "Success"
