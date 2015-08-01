@@ -1,6 +1,6 @@
 To run this example:
 
 ```
-ghc DoNotation.hs
-./DoNotation
+ghc WriterMonads.hs
+./WriterMonads
 ```
