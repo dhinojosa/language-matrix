@@ -12,9 +12,12 @@ type Address = [String]
 
 data Employee = Worker SSN FirstName MiddleName LastName Address
               | Supervisor SSN FirstName MiddleName LastName 
-                Address [Employee] deriving (Show)
+                Address [Employee] deriving (Show) -- deriving Show to 
+                                                   -- be able to print
+                                                   -- to console
 
 -- Using pattern matching, pattern_matching/PatternMatching.hs for more detail
+
 firstName :: Employee -> String
 firstName (Worker _ fst _ _ _)  = fst
 firstName (Supervisor _ fst _ _ _ _) = fst
@@ -28,6 +31,6 @@ main = do
          putStrLn(firstName(johnTheWorkHorse))
          putStrLn(firstName(bobTheBoss))
 
-         -- Using function application, see function_application/FunctionApplication.hs
+         -- Using function application to simplify, see function_application/FunctionApplication.hs
          putStrLn $ firstName $ johnTheWorkHorse
          putStrLn $ firstName $ bobTheBoss
