@@ -34,3 +34,6 @@ main = do
          -- Using function application to simplify, see function_application/FunctionApplication.hs
          putStrLn $ firstName $ johnTheWorkHorse
          putStrLn $ firstName $ bobTheBoss
+
+         -- See record_syntax/RecordSyntax.hs for more simplification when accessing information from an
+         -- Algebraic Data Type.
