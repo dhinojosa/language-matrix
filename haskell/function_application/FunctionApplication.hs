@@ -43,6 +43,9 @@ multiplyBy2 x = x * 2
 -- -------------------------------------------------------------------
 --    0       |                  |                 | $, $!, `seq`
 
+-- Note: Function application cannot be done with two parameters only one
+-- as evident by the function application formula
+
 main = do
          putStrLn $ show $ multiplyBy2 3 + 4    -- 10
          putStrLn $ show $ multiplyBy2 (3 + 4)  -- 14
