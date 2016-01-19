@@ -23,6 +23,20 @@ firstName :: Employee -> String
 firstName (Worker _ fst _ _ _)  = fst
 firstName (Supervisor _ fst _ _ _ _) = fst
 
+-- Algebraic data type with type parameters
+
+data Box a = Box a -- a is a type parameter
+
+boxContents :: Box a -> a
+boxContents (Box a) = a
+
+data Tuple3 a b c = Tuple3 a b c -- a b and c are type parameters
+
+firstItem :: Tuple3 a b c -> a -- this function will return whatever
+                               -- type that a is which can be anything
+                               -- an Int, an Employee, or a Supervisor
+firstItem (Tuple3 a _ _) = a
+
 main = do
          let johnTheWorkHorse = Worker "333-12-1200" "John" Nothing 
                                 "Smith" ["1234 Amber Lane", "St. Louis", "MO"]
@@ -41,3 +55,13 @@ main = do
          -- See record_syntax/RecordSyntax.hs for more simplification
          -- when accessing information from an
          -- Algebraic Data Type.
+
+         let myBox = Box 4 -- Box of Int
+         let myBox2 = Box johnTheWorkHorse -- Box Worker
+
+         putStrLn $ show $ boxContents $ myBox
+         putStrLn $ show $ boxContents $ myBox2
+
+         let t3 = Tuple3 1 "Hello" 'c'
+
+         putStrLn $ show $ firstItem $ t3
