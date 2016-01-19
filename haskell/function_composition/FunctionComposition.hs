@@ -17,7 +17,7 @@ rsz = (reverse . sort)
 fruits = rsz ["Apple", "Orange", "Tangelo", "Apricot", "Pomegranate"]
 
 main = do
-         putStrLn (assert (fruits !! 2 == "Orange"  "Success"))
+         putStrLn (assert (fruits !! 2 == "Orange" "Success"))
 
          -- the previous line can be rewritten as the following to avoid 
          -- parenthesis, see function_application/FunctionApplication.hs
