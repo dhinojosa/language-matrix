@@ -6,6 +6,6 @@ int main() {
   int b = a; //Automatic conversion
   a = b;
   int c = 500000;
-  short d = c; //This is allowed
+  short d = c; //This is allowed, but will be truncated causing a negative!
   cout << "d: " << d;
 }

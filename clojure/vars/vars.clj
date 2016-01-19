@@ -8,11 +8,12 @@
 (.start (Thread. #(assert (= x 10))))
 
 ; dynamic is a macro that allows a var to be reassigned in a binding
+; As of Clojure 1.3, vars need to be explicitly marked as ^:dynamic in order for
+; them to be dynamically rebindable:
 (def ^:dynamic y 10)
 
 ; inside the binding scope `y` takes on the value of `11`, the var `y` had
 ; previous been declared as `^:dynamic`
-
 (binding [y 11]
   (assert (= y 11)))
 
@@ -20,11 +21,13 @@
 ; therefore y should be 10
 (assert (= y 10))
 
+; locating y in a separate thread
+(.start (Thread. #(assert (= y 10))))
 
 ; The initial value of a var is called a root binding
-
-(assert (= (var x) #'user/x))         ; var will not return the value but the binding
-                                      ; the #' is a reader macro that does the same thing
+; var will not return the value but the binding
+; the #' is a reader macro that does the same thing
+(assert (= (var x) #'user/x)) 
 
 (defn funx [] "Up on a hill")
 (assert (= (var x) #'x))

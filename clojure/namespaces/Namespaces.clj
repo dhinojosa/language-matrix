@@ -7,6 +7,12 @@
 
 (assert (= (resolve 'x) #'user/x))
 
+
+;To display the current namespace use the *ns* variable
+
+(println *ns*)
+
+
 ; Switch namespaces
 
 (in-ns 'foo-ns)
