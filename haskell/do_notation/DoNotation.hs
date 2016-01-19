@@ -6,15 +6,22 @@ import Control.Monad
 -- Monads contains a bind method that is used to apply a function that
 -- returns a Monad. Consider he following
 
-monadAssert1 = assert ((Just 3 >>= (\x -> Just (show x ++ "!"))) == Just "3!") "Monad Test 1: ✓"
+monadAssert1 = assert ((Just 3 >>= (\x -> Just (show x ++ "!"))) == Just "3!")
+                         "Monad Test 1: ✓"
 
 -- if we had another binding within another binding...
 
-monadAssert2 = assert ((Just 3 >>= (\x -> Just "!" >>= (\y -> Just (show x ++ y)))) == Just "3!") "Monad Test 2: ✓"
+monadAssert2 = assert ((Just 3 >>=
+                         (\x -> Just "!" >>=
+                              (\y -> Just (show x ++ y)))) == Just "3!")
+                                  "Monad Test 2: ✓"
 
 -- A monad with a failure in the chain
 
-monadAssert3 = assert ((Just 3 >>= (\x -> Nothing >>= (\y -> Just (show x ++ y)))) == Nothing) "Monad Test 3: ✓"
+monadAssert3 = assert ((Just 3 >>=
+                         (\x -> Nothing >>=
+                             (\y -> Just (show x ++ y)))) == Nothing)
+                                "Monad Test 3: ✓"
 
 -- Creating a method that does what monadAssert2 does:
 
