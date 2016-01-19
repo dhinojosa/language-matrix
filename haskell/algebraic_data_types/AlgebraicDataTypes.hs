@@ -6,7 +6,8 @@ import Data.Maybe
 
 type FirstName = String
 type LastName = String
-type MiddleName = Maybe String -- including Maybe type, which is an optional type
+type MiddleName = Maybe String -- including Maybe type,
+                               -- which is an optional type
 type SSN = String
 type Address = [String]
 
@@ -26,14 +27,17 @@ main = do
          let johnTheWorkHorse = Worker "333-12-1200" "John" Nothing 
                                 "Smith" ["1234 Amber Lane", "St. Louis", "MO"]
          let bobTheBoss = Supervisor "124-55-3010" "Bob" Nothing "Ramirez" 
-                                ["33 Main St.", "Skokie", "IL"] [johnTheWorkHorse]
+                                ["33 Main St.", "Skokie", "IL"]
+                                [johnTheWorkHorse]
  
          putStrLn(firstName(johnTheWorkHorse))
          putStrLn(firstName(bobTheBoss))
 
-         -- Using function application to simplify, see function_application/FunctionApplication.hs
+         -- Using function application to simplify, see
+         -- function_application/FunctionApplication.hs
          putStrLn $ firstName $ johnTheWorkHorse
          putStrLn $ firstName $ bobTheBoss
 
-         -- See record_syntax/RecordSyntax.hs for more simplification when accessing information from an
+         -- See record_syntax/RecordSyntax.hs for more simplification
+         -- when accessing information from an
          -- Algebraic Data Type.
