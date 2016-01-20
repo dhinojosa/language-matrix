@@ -17,27 +17,26 @@
 ; * a Var in the current Namespace
 ; * a Var referred from another Namespace
 
-;The Var represents a storage location.
+; The Var represents a storage location.
 
-;There are good reasons why Clojure separates Vars from Symbols.
+; There are good reasons why Clojure separates Vars from Symbols.
 ; First, it avoids the annoyance of Common Lisp's
 ; automatically-interned symbols, which can "pollute"
 ; a package with unwanted symbols.
 
-;Secondly, Clojure Vars have special semantics with regard to concurrency.
+; Secondly, Clojure Vars have special semantics with regard to concurrency.
 ; A Var has a exactly one "root binding" visible to all threads.
 ; (When you type "def" you are setting the root binding of a Var.)
 ; Changes to a Var made within a thread (using "set!" or "binding")
 ; are visible only to that thread and its children.
 
-
 ; `str` is a Symbol
 (println (str "One" "Two" "Three" "A" "Clock"))
 
-; creating a method
+; creating a function
 (defn adder 
   [x y]
   (+ x y))
 
-; adder is now a symbol
+; adder is now a symbol, it is just name.
 (println (adder 3 5))
