@@ -1,31 +1,54 @@
 ; By default all clojure binding are in the #'user namespace
 
 ; Resolve returns the var (See vars/Vars.clj) or class that a symbol will resolve
-; to.
-
+; to
 (def x 101)
 
+; #'user/x is the name space and the var. The hash alone # is called the
+; dispatch macro. The dispatch macro causes the reader to use a reader
+; macro from another table, indexed by the character following
+
+; The hash with the tick is called a var-quote and it obtains the var
+; for an item. Therefore: #'x => (var x).
+
 (assert (= (resolve 'x) #'user/x))
+(assert (= (resolve 'x) (var user/x)))
 
-
-;To display the current namespace use the *ns* variable
-
+;To display the current namespace use the *ns* variable. Any variable wrapped
+; in asterisk is dynamically bounded meaning it is meant to be mutable. For
+; example *ns* is the default namespace which happens to be user
 (println *ns*)
 
+;ns-interns will display all vars that are bound, and delivered as a map
+(println (ns-interns *ns*))
 
-; Switch namespaces
+(assert (= (map? (ns-interns *ns*)) true))
 
+; Switch namespaces, we are now in foo-ns
 (in-ns 'foo-ns)
 
-; The #'user namespace had this automatically, but since we are using
-; a different namespace, we have to declare 'use
+; println would not work if we didn't declare that we wanted to use
+; `clojure.core. The following will error out, since we are in a different
+; namespace
 
+;(println "foo")
+
+; The #'user namespace had this automatically, but since we are using
+; a different namespace, we have to declare 'use.
 (clojure.core/use 'clojure.core)
 
-; println would not work if we didn't declare that we wanted to use `clojure.core.
-; 'x is nil since we are in a different namespace
+; Now we should be able to println
+(println "foo")
 
+; 'x is nil since we are in a different namespace
 (assert (= (resolve 'x) nil))
+
+; but we can always refer to vars in a separate namespace using the fully
+; qualified name
+(println user/x)
+
+
+
 
 ; Declaring x in the #'foons namespace
 
