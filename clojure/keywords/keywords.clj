@@ -14,7 +14,7 @@
 ; in the current namespace so as to avoid any conflicts
 (def baseball-team {::name "Orioles" :city "Baltimore"})
 
-; Jumping into another workspace, see namespaces/Namespaces.clj
+; Jumping into another workspace, see namespaces/namespaces.clj
 (in-ns 'other-ns)
 
 ; Using clojure core since it doesn't come automatically with new namespaces
