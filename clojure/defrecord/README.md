@@ -1,4 +1,4 @@
 To run this example:
 ```
-java -cp clojure.jar clojure.main Defrecord.clj 
+java -cp clojure.jar clojure.main defrecord.clj 
 ```

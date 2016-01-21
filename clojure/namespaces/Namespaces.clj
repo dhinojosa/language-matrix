@@ -20,7 +20,7 @@
 (println *ns*)
 
 ;ns-interns will display all vars that are bound, and delivered as a map
-(println (ns-interns *ns*))
+(println (hello_world *ns*))
 
 (assert (= (map? (ns-interns *ns*)) true))
 

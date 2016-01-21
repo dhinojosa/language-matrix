@@ -21,7 +21,7 @@
 ;A character is a form, see character/Characters.clj
 (println \b)
 
-;A symbol is a form, see symbol/Symbols.clj
+;A symbol is a form, see symbol/symbols.clj
 (println java.lang.String)
 ; TODO: (println user/foo) fix this
 
