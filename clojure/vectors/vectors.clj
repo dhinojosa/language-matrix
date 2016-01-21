@@ -20,3 +20,12 @@
 ; In the following; adding a list into a vector
 
 (assert (= (last (into states '("Arizona", "Utah", "Tennessee", "North Dakota"))) "North Dakota"))
+
+; to retrieve an element from a vector, a list can be used as a function and
+; the index as the argument
+
+(assert (= (states 2) "Illinois"))
+
+; you can also opt to use the nth function to retrieve an element by index
+
+(assert (= (nth states 2) "Illinois"))
