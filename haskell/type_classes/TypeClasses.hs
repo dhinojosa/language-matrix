@@ -6,6 +6,15 @@
 --
 -- (/=) :: a -> a -> Bool
 
+
+data Tuple3 a b c = Tuple3 a b c deriving (Show) -- Show is a type class
+
+data Tuple2 a b = Tuple2 a b deriving (Show, Eq) -- Ensuring Tuple2 has equality
+
+-- If we wish not to derive an Eq, we can certainly declare it
+instance (Eq a, Eq b, Eq c) => Eq (Tuple3 a b c) where
+   (Tuple3 a b c) == (Tuple3 x y z) = (a == x) && (b == y) && (c == z)
+
 class Compatible comp where
    isCompatible :: comp -> comp -> Bool
 
@@ -24,10 +33,6 @@ instance Functor' [] where
     -- fmap' f xs = map f xs
     -- can also be written as
     fmap' = map
-
-data Tuple3 a b c = Tuple3 a b c deriving (Show)
-
-data Tuple2 a b = Tuple2 a b deriving (Show)
 
 class Indexable idx where
    first :: idx a -> a
@@ -54,8 +59,10 @@ main = do
           putStrLn(show (5 == 5))
           putStrLn(show (4 /= 3))
           putStrLn(show ('a' == 'a'))
-          putStrLn $ show $ isCompatible (Just 3) (Just 4)
-          putStrLn $ show $ fmap' (\x -> x + 1) [1,2,3]
-          putStrLn $ show $ swap $ Tuple2 1.0 "One"
-          putStrLn $ show $ first $ Tuple2 1.0 "One" -- Does not work as expected
-          putStrLn $ show $ first $ Tuple3 1 1.0 "One" -- Does not work as expected
+          putStrLn . show $ isCompatible (Just 3) (Just 4)
+          putStrLn . show $ fmap' (\x -> x + 1) [1,2,3]
+          putStrLn . show $ Tuple2 1.0 "One" == Tuple2 1.0 "One"
+          putStrLn . show $ Tuple3 1 1.0 "One" == Tuple3 1 1.0 "One"
+          putStrLn . show . swap $ Tuple2 1.0 "One"
+          putStrLn . show . first $ Tuple2 1.0 "One" -- Does not work as expected
+          putStrLn . show . first $ Tuple3 1 1.0 "One" -- Does not work as expected
