@@ -1,16 +1,16 @@
 # Modules provide a namespace for any constructs within.
 module Alpha
-   module Beta
-      class Location
-	 attr_reader :city, :state, :zip
+  module Beta
+    class Location
+      attr_reader :city, :state, :zip
 
-	 def initialize(city, state, zip)
-	    @city = city
-	    @state = state
-	    @zip = zip
-	 end
+      def initialize(city, state, zip)
+        @city = city
+        @state = state
+        @zip = zip
       end
-   end
+    end
+  end
 end
 
 # To refer to a module devide each module name with a `::`
