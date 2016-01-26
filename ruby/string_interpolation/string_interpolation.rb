@@ -12,3 +12,4 @@ age = 76
 # values in the context
 
 puts "His name was #{name} and he lived until he was #{age}"
+
