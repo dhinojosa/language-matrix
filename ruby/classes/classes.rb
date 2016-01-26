@@ -1,4 +1,4 @@
-#A class in Ruby is declared with the keyword `class`
+# A class in Ruby is declared with the keyword `class`
 
 class Employee
 
@@ -25,7 +25,7 @@ class Employee
    end
 end
 
-#Instantiation uses the class name followed by new
+# Instantiation uses the class name followed by new
 barker = Employee.new('Bob', 'Barker')
 
 puts barker.first_name
