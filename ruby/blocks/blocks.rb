@@ -9,7 +9,7 @@ end
 #Simple way to create a block
 sample_block { puts "World" } 
 
-# Another way to create a block
+# Another way to create a block like above
 sample_block do
    puts "World 2"
 end

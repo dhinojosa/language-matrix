@@ -1,5 +1,5 @@
 #Required to load assert, since ruby does not have a standard assert
-require 'assert'
+require_relative '../assert'
 
 # A String can be interpolated with a double quoted string
 # Given a couple variable assignments...

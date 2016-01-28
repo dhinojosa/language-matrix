@@ -1,8 +1,5 @@
-# Can be declared to load assert, since ruby does not have a standard assert
-# $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/..")
-# or you can run ruby -I.. variable_length_arguments.rb
 
-require 'assert'
+require_relative '../assert'
 
 # Variable length argument lists in ruby
 # More than one item can be added to the method
