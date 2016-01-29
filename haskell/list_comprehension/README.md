@@ -1,6 +1,6 @@
 To run this example:
 
 ```
-ghc Where.hs
-./Where
+ghc ListComprehension.hs
+./ListComprehension
 ```
