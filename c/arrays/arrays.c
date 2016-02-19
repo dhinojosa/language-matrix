@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#define SIZE 20
 int main() {
    //Included with initialization
    int int_array[5] = {1,2,3,4,5}; 
@@ -18,5 +19,9 @@ int main() {
    for (int i = 0; i < size; i++) {
       printf("float_array[%i] = %f\n", i, float_array[i]);
    }
+
+   double double_int_array[SIZE] = {1, 4, 3, 2, 10, 19, 30, 40, 55, 102};
+   printf("double_int_array[4] = %f\n", double_int_array[4]);
+
    return 0;
 }
