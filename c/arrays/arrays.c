@@ -23,7 +23,11 @@ int main() {
    double double_int_array[SIZE] = {1, 4, 3, 2, 10, 19, 30, 40, 55, 102};
    printf("double_int_array[4] = %f\n", double_int_array[4]);
 
+   //You don't need to particularly declare the size when issuing an array to 
+   //a variable.
    int inferred_size_array[] = {3, 4, 10, 19};
-   println("inferred_size_array[2] = %f\n", inferred_size_array[1]);
+   printf("inferred_size_array[2] = %d\n", inferred_size_array[1]);
+   printf("size of inferred_size_array is = %ld\n", 
+         sizeof(inferred_size_array)/sizeof(inferred_size_array[0]));
    return 0;
 }
