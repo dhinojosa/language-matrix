@@ -23,5 +23,7 @@ int main() {
    double double_int_array[SIZE] = {1, 4, 3, 2, 10, 19, 30, 40, 55, 102};
    printf("double_int_array[4] = %f\n", double_int_array[4]);
 
+   int inferred_size_array[] = {3, 4, 10, 19};
+   println("inferred_size_array[2] = %f\n", inferred_size_array[1]);
    return 0;
 }
