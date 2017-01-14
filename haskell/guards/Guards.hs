@@ -22,6 +22,6 @@ discountCalc age
                      senior  = regular - (regular * 0.10)
 
 main = do 
-         putStrLn $ show $ myAbs 10
-         putStrLn $ show $ discountCalc 40
-         putStrLn $ show $ discountCalc 80
+         putStrLn . show . myAbs        $ 10
+         putStrLn . show . discountCalc $ 40
+         putStrLn . show . discountCalc $ 80
