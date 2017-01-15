@@ -16,14 +16,16 @@ Integer.metaClass.'static'.matrix = {x, y, item ->
                                         result
                                     }
 
-Integer.metaClass.constructor << {Float x -> Math.floor(x)}
+Integer.metaClass.constructor << {Float x -> Math.floor(x)}                             //Add Constructor
 
-Integer.metaClass.constructor << {Double x -> Math.floor(x)}
+Integer.metaClass.constructor << {Double x -> Math.floor(x)}                            //Add Constructor
+
+Integer.metaClass.constructor = {int x -> x * 4}                                        //Replace & Intercept call
 
 assert 10.divMod(3) == [3,1]
 assert 10.isEven()  == true
 assert 10.isOdd()   == false
 assert Integer.matrix(2, 3, 'x') == [['x', 'x', 'x'],
                                      ['x', 'x', 'x']]
-
 assert new Integer(90.00) == 90
+assert new Integer(4) == 16
