@@ -22,6 +22,8 @@ Integer.metaClass {
     constructor = {Float x -> Math.floor(x)}                                  // Not a <<
 
     constructor = {Double x -> Math.floor(x)}
+
+    constructor = {int x -> x * 4}                                            //Intercept call
 }
 
 assert 10.divMod(3) == [3,1]
@@ -31,3 +33,4 @@ assert Integer.matrix(2, 3, 'x') == [['x', 'x', 'x'],
                                      ['x', 'x', 'x']]
 
 assert new Integer(90.00) == 90
+assert new Integer(10)    == 40
