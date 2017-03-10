@@ -33,7 +33,7 @@ public class SocketsReaderWriter {
 
         System.out.println("Sent info");
 
-        String line = null;
+        String line;
         while ((line = bufferedReader.readLine()) != null) {
            System.out.println(line);
         }
