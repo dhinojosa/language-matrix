@@ -12,7 +12,7 @@ const age = 76;
 console.log(`His name was ${name} and he lived until he was ${age}`)
 
 /* A bracket is mandatory in order to do string interpolation, the
- * following will not work properly and will only print $age */
+ * following will not work properly and will only print $name and $age */
 
 console.log(`His name was $name and he lived until he was $age`)
 
