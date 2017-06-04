@@ -15,7 +15,7 @@ data TicketPrice = Free | Cost Float deriving (Show)
 
 discountCalc :: (Num a, Ord a) => a -> TicketPrice
 discountCalc age
-             | age < 10 = Free
+             | age < 10              = Free
              | age >= 10 && age < 60 = Cost regular
              | age >= 60             = Cost senior
                where regular = 35
