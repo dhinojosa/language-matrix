@@ -1,6 +1,6 @@
 To run this example:
 
 ```
-javac -cp BasicThreads.java
+javac BasicThreads.java
 java -cp . com.evolutionnext.BasicThreads
 ```
