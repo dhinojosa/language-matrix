@@ -6,6 +6,7 @@
      (apply * [1 2 3])
   )
 )
+
 (assert (= x 6))
 
 ; `do` also marks where a side effect will be performed.  This mimics
