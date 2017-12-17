@@ -1,9 +1,7 @@
-package com.evolutionnext;
-
 import java.time.LocalDateTime;
 
 class BasicThreads {
-    static class MyRunnable implements Runnable {
+    static class MyThread extends Thread {
        private boolean done = false;
 
        public void finish() {
@@ -26,11 +24,10 @@ class BasicThreads {
     public static void main(String[] args) throws InterruptedException {
          System.out.print(String.format("In Main: [%s] %s\r\n", 
               Thread.currentThread().getName(), LocalDateTime.now()));
-         MyRunnable runnable = new MyRunnable();
-         Thread thread = new Thread(runnable);
+         MyThread thread = new MyThread();
          thread.start();
          Thread.sleep(5000);
-         runnable.finish();
+         thread.finish();
          thread.interrupt();
     }
 }
