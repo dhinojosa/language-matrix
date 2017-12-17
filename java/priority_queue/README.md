@@ -2,5 +2,5 @@ To run this example:
 
 ```
 javac PriorityQueueRunner.java
-java -cp . PriorityQueueRunner
+java -ea -cp . PriorityQueueRunner
 ```
