@@ -35,6 +35,6 @@ public class PriorityQueueRunner {
         queue.offer(new Person("Jane", "Austen"));
         queue.offer(new Person("Leo", "Tolstoy"));
         queue.offer(new Person("Lewis", "Carroll"));
-        assert(queue.peek().getLastName().equals("Austen"));
+        assert(queue.peek().getLastName().equals("Austen3"));
     }
 }
