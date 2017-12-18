@@ -1,6 +1,6 @@
 To run this example:
 
 ```
-gcc -Wall -o hello_world arrays.c
-./Arrays
+gcc -Wall -o arrays arrays.c
+./arrays
 ```
