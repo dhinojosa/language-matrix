@@ -1,5 +1,8 @@
-*.swp
-*.swo
-*.hi
-*.o
-**/.idea/
+**/*.swp
+**/*.swo
+**/*.hi
+**/*.o
+**/.idea
+**/*.class
+**/.srcList
+**/tags
