@@ -2,10 +2,10 @@
 
 class Employee
 
-   #Constructors are methods called `initialize
+   #Constructors are methods called initialize
    def initialize(first_name, last_name)
       #The @ designate that it will be assigned to member variable
-      @first_name = first_name 
+      @first_name = first_name
       @last_name = last_name
    end
 
