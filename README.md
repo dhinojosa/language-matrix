@@ -15,5 +15,62 @@ Each language has a README.md, click on the language and view the topics.  Some 
 ## Do you accept pull requests?
 Absolutely. Be warned, I am aiming for a certain aesthetic and layout, so it may not happen right away.
 
+## Organization [New]:
 
-
+<table>
+   <thead>
+      <tr>
+          <td>
+             Topic
+          </td>
+          <td>
+              Java
+          </td>
+           <td>
+              JavaScript
+           </td>
+           <td>
+              Haskell
+           </td>
+           <td>
+              Clojure
+           </td>
+      </tr>
+   </thead>
+   <tbody>
+   <tr>
+             <td>
+                Generics
+             </td>
+             <td>
+                 `java/generics`
+             </td>
+              <td>
+                 N/A
+              </td>
+              <td>
+                 `haskell/parameterized_types`
+              </td>
+              <td>
+                 N/A
+              </td>
+         </tr>
+         <tr>
+                      <td>
+                         Generics
+                      </td>
+                      <td>
+                          `java/generics`
+                      </td>
+                       <td>
+                          N/A
+                       </td>
+                       <td>
+                          `haskell/parameterized_types`
+                       </td>
+                       <td>
+                          N/A
+                       </td>
+                  </tr>
+   </tbody>
+</table>

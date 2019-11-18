@@ -1,3 +1,25 @@
+{-
+ - Copyright (c) 2017 Hinojosa, Daniel <dhinojosa@evolutionnext.com>
+ - Author: Hinojosa, Daniel <dhinojosa@evolutionnext.com>
+ -
+ - Permission is hereby granted, free of charge, to any person obtaining a copy of
+ - this software and associated documentation files (the "Software"), to deal in
+ - the Software without restriction, including without limitation the rights to
+ - use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ - the Software, and to permit persons to whom the Software is furnished to do so,
+ - subject to the following conditions:
+ -
+ - The above copyright notice and this permission notice shall be included in all
+ - copies or substantial portions of the Software.
+ -
+ - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ - IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ - FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ - COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ - IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ - CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -}
+
 import Data.Monoid
 import Control.Monad.Writer
 
@@ -11,11 +33,11 @@ isBigGang x = (x > 9, "A pretty big gang")
 -- applyLog :: (a,String) -> (a -> (b,String)) -> (b,String)  
 -- applyLog (x,log) f = let (y,newLog) = f x in (y,log ++ newLog)
 
-applyLog :: (Monoid m) => (a,m) -> (a -> (b,m)) -> (b,m)  
+applyLog :: (Monoid m) => (a,m) -> (a -> (b,m)) -> (b,m)
 applyLog (x,log) f = let (y,newLog) = f x in (y,log `mappend` newLog)  
 
-type Food = String  
-type Price = Sum Int  
+type Food = String
+type Price = Sum Int
   
 addDrink :: Food -> (Food,Price)  
 addDrink "beans" = ("milk", Sum 25)  
@@ -24,7 +46,13 @@ addDrink _ = ("beer", Sum 30)
 
 -- Signature for a Writer Monad 
 --
--- newtype Writer w a = Writer { runWriter :: (a, w) }  
+-- newtype Writer w a = Writer { runWriter :: (a, w) }
+--
+-- runWriter means that there will be a method called run writer that
+-- will return a tuple of a (a parameterized type, and w the writer)
+--
+-- Notice that the w is the first parameterized type yet, in 
+-- runWriter it is in the second tuple position
 --
 -- instance (Monoid w) => Monad (Writer w) where  
 --     return x = Writer (x, mempty)  
@@ -32,7 +60,6 @@ addDrink _ = ("beer", Sum 30)
 
 logNumber :: Int -> Writer [String] Int  
 logNumber x = writer (x, ["Got number: " ++ show x])  
-
 
 multWithLog :: Writer [String] Int  
 multWithLog = do
