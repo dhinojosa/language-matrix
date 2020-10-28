@@ -1,7 +1,7 @@
 package com.evolutionnext.generics;
 
 import com.evolutionnext.generics.people.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class InvariantTest {
 
     //9. Invariant Method Calls
     @Test
-    public void testInvariantMethod() throws Exception {
+    public void testInvariantMethod() {
         List<American> americans = new ArrayList<>();
         americans.add(new American());
         americans.add(new Wisconsinite());

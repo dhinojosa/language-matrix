@@ -1,7 +1,7 @@
 package com.evolutionnext.generics;
 
 import org.assertj.core.util.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 

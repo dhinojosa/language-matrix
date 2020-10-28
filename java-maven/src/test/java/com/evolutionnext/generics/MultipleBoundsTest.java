@@ -1,6 +1,6 @@
 package com.evolutionnext.generics;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.CharArrayWriter;
 import java.io.Closeable;

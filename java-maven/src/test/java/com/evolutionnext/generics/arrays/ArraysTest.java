@@ -1,7 +1,7 @@
 package com.evolutionnext.generics.arrays;
 
 import com.evolutionnext.generics.people.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

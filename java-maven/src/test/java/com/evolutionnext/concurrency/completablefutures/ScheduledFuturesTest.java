@@ -1,6 +1,7 @@
 package com.evolutionnext.concurrency.completablefutures;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.*;
 
@@ -33,7 +34,7 @@ public class ScheduledFuturesTest {
      */
     @Test
     public void testScheduledFutureWithFixedDelay() throws
-        ExecutionException, InterruptedException {
+        InterruptedException {
 
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newScheduledThreadPool(6);
@@ -60,7 +61,7 @@ public class ScheduledFuturesTest {
 
     @Test
     public void testScheduledFutureWithFixedRate()
-            throws ExecutionException, InterruptedException {
+            throws InterruptedException {
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newScheduledThreadPool(3);
 

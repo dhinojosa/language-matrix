@@ -1,7 +1,7 @@
 package com.evolutionnext.generics;
 
 import com.evolutionnext.generics.people.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -168,7 +168,7 @@ public class CovariantTest {
 
     //15. Process Covariant Assignment with Object List
     @Test
-    public void testProcessCovariantObjectList() throws Exception {
+    public void testProcessCovariantObjectList() {
         List<Object> objects = new ArrayList<>();
         objects.add(new Denverite());
         objects.add(new Floridian());
