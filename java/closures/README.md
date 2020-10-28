@@ -1,6 +1,7 @@
 To run this example:
 
 ```
-javac -cp Closures.java
+javac Closures.java
 java -ea -cp . Closures
+rm *.class
 ```

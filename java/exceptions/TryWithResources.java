@@ -11,7 +11,7 @@ public class TryWithResources {
       } catch (MalformedURLException mue) {
          mue.printStackTrace();
       }
-      try ( InputStreamReader reader = new InputStreamReader(url.openStream());
+      try (InputStreamReader reader = new InputStreamReader(url.openStream());
             BufferedReader bufferedReader = new BufferedReader(reader)) {
          String line = null;
          while ((line = bufferedReader.readLine()) != null) {
