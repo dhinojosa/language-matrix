@@ -1,4 +1,4 @@
 To run this example:
 ```
-python3 dictionary.py
+python3 arrays.py
 ```

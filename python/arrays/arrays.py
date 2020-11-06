@@ -1,6 +1,6 @@
 from array import *
 
-"""Arrays are available in Python, but Lists are usually used. 
+"""Arrays are available in Python, but Lists are usually used.
 Arrays can used the u code to create an array of Strings but will be deprecated"""
 
 
@@ -8,19 +8,19 @@ Arrays can used the u code to create an array of Strings but will be deprecated"
 Arrays in Python are strong typed. A type is required in order to create
 
 Type code	C Type	                Python Type	    Minimum size (bytes)
-'b'	        signed char	        int	                1	 
-'B'	        unsigned char	        int	                1	 
-'u'	        Py_UNICODE	        Unicode character	2	
-'h'	        signed short	        int	                2	 
-'H'	        unsigned short	        int	                2	 
-'i'	        signed int	        int	                2	 
-'I'	        unsigned int	        int	                2	 
-'l'	        signed long	        int	                4	 
-'L'	        unsigned long	        int	                4	 
-'q'	        signed long long	int	                8	
-'Q'	        unsigned long long	int	                8	
-'f'	        float	                float	                4	 
-'d'	        double	                float	                8	 
+'b'	        signed char	            int	                1
+'B'	        unsigned char	        int	                1
+'u'	        Py_UNICODE	            Unicode character	2
+'h'	        signed short	        int	                2
+'H'	        unsigned short	        int	                2
+'i'	        signed int	            int	                2
+'I'	        unsigned int	        int	                2
+'l'	        signed long	            int	                4
+'L'	        unsigned long	        int	                4
+'q'	        signed long long	    int	                8
+'Q'	        unsigned long long	    int	                8
+'f'	        float	                float	            4
+'d'	        double	                float	            8
 
 u will be deprecated in 3.3
 """
