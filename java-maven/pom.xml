@@ -14,7 +14,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
-        <junit.vintage.version>${junit.version}.0</junit.vintage.version>
         <junit.platform.version>1.2.0</junit.platform.version>
         <maven-surefire-report-plugin.version>2.21.0
         </maven-surefire-report-plugin.version>
@@ -84,8 +83,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>12</source>
-                    <target>12</target>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
         </plugins>
