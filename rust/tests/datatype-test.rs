@@ -163,4 +163,89 @@ mod datatypes {
         let c: usize = 0;
         assert!(c == 0);
     }
+
+
+    /**
+     * Hexadecimal is preceded by 0x
+     */
+    #[test]
+    fn test_hex() {
+        let b = 0xff;
+        assert!(b == 255);
+    }
+
+    /**
+    * Octal is preceded by 0 and o
+    */
+    #[test]
+    fn test_oct() {
+        let b = 0o77;
+        assert!(b == 63);
+    }
+
+    /**
+     * Binary is preceded by 0b
+     */
+    #[test]
+    fn test_binary() {
+        let b = 0b1111_0000;
+        assert!(b == 240)
+    }
+
+    /**
+     * Bytes can be used with characters
+     */
+    #[test]
+    fn test_byte() {
+        let b = b'A';
+        assert!(b == 65);
+    }
+
+    /**
+     * Floating point comes in f32
+     */
+    #[test]
+    fn test_floating_point_f32() {
+        let fp = 302.123 as f32;
+        assert!(fp == 302.123)
+    }
+
+    /**
+   * Floating point comes in f64, which is the default size
+   */
+    #[test]
+    fn test_floating_point_f64() {
+        let fp = 302.123;
+        assert!(fp == 302.123)
+    }
+
+
+    /**
+     * Booleans are just true and false
+     */
+    #[test]
+    fn test_booleans() {
+        let c = true;
+        assert!(c == true);
+
+        let d = false;
+        assert!(d == false)
+    }
+
+    /**
+     * Chars are in single quotes. four bytes in size and represents a Unicode Scalar Value,
+     * which means it can represent a lot more than just ASCII. Accented letters; Chinese,
+     * Japanese, and Korean characters; emoji; and zero-width spaces are all valid
+     * char values in Rust. Ranges are inclusive: U+0000 to U+D7FF and U+E000 to U+10FFFF
+     */
+    #[test]
+    fn test_characters() {
+        let c = 'z';
+        let z = 'ℤ';
+        let heart_eyed_cat = '😻';
+
+        assert!(c == 'z');
+        assert!(z == 'ℤ');
+        assert!(heart_eyed_cat == '😻');
+    }
 }
