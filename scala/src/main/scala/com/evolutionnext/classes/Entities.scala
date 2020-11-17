@@ -1,8 +1,8 @@
-package com.ora.scalaprogrammingfundamentals
+package com.evolutionnext.classes
 
 import java.time.LocalDate
 
-class Stamp protected[scalaprogrammingfundamentals] (val theme:String, val year:Int,
+class Stamp protected[classes] (val theme:String, val year:Int,
             val currentYearFunction: () => Int) extends Introspection {
   def age:Int = currentYearFunction() - year
 }

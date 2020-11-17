@@ -1,4 +1,4 @@
-package com.ora.scalaprogrammingfundamentals
+package com.evolutionnext.instances
 
 import org.scalatest.{FunSuite, Matchers}
 

@@ -1,7 +1,5 @@
-type CustomerID = String
-type ReviewBody = String
+package com.evolutionnext.type_synonyms
+
+//package object contains the type alias
 class BetterReview(val customerID:CustomerID, val reviewBody:ReviewBody)
-object TypeSynonyms extends App {
-    val r = new BetterReview("123300-EJ", "This is a review of a nice book")
-    println(r.customerID)
-}
+

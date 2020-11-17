@@ -1,5 +1,6 @@
-package com.ora.scalaprogrammingfundamentals
+package com.evolutionnext.traits
 
+import com.evolutionnext.classes.Stamp
 import org.scalatest.{FunSuite, Matchers}
 
 class TraitsSpec extends FunSuite with Matchers {
@@ -211,7 +212,7 @@ class TraitsSpec extends FunSuite with Matchers {
     abstract class IntQueue {
       def get(): Int
 
-      def put(x: Int)
+      def put(x: Int):Unit
     }
 
     import scala.collection.mutable.ArrayBuffer
@@ -221,25 +222,25 @@ class TraitsSpec extends FunSuite with Matchers {
 
       def get() = buf.remove(0)
 
-      def put(x: Int) {
+      def put(x: Int):Unit = {
         buf += x
       }
     }
 
     trait Doubling extends IntQueue {
-      abstract override def put(x: Int) {
+      abstract override def put(x: Int): Unit = {
         super.put(2 * x)
       } //abstract override is necessary to stack traits
     }
 
     trait Incrementing extends IntQueue {
-      abstract override def put(x: Int) {
+      abstract override def put(x: Int):Unit ={
         super.put(x + 1)
       }
     }
 
     trait Filtering extends IntQueue {
-      abstract override def put(x: Int) {
+      abstract override def put(x: Int):Unit = {
         if (x >= 0) super.put(x)
       }
     }

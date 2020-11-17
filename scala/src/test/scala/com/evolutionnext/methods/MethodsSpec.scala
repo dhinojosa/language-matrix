@@ -1,4 +1,4 @@
-package com.ora.scalaprogrammingfundamentals
+package com.evolutionnext.methods
 
 import org.scalatest.{FunSuite, Matchers}
 
@@ -174,7 +174,7 @@ class MethodsSpec extends FunSuite with Matchers {
       s"arg1=$arg1, rest=$rest"
     }
 
-    varargs("Hello", List(1,2,3)) should be ("arg1=Hello, rest=WrappedArray(List(1, 2, 3))")
+    varargs("Hello", List(1,2,3)) should be ("arg1=Hello, rest=ArraySeq(List(1, 2, 3))")
 
     varargs("Hello", List(1,2,3):_*) should be ("arg1=Hello, rest=List(1, 2, 3)")
   }
