@@ -3,7 +3,7 @@ package com.evolutionnext.givendelegates
 object ExecutionContextDelegate extends App {
   import scala.concurrent._
   import java.util.concurrent.Executors
-  given ec : ExecutionContext = 
+  given ec as ExecutionContext = 
      ExecutionContext.fromExecutor(Executors.newFixedThreadPool(12))
 
   val future = Future.apply {

@@ -18,15 +18,15 @@ object MultiversalEquality extends App {
 
     //They are comparable if they are the same type, if they are not, 
     //then you would need to declare
-    given Eql[Int, String] = Eql.derived
+    given CanEqual[Int, String] = CanEqual.derived
     println(3 == "3") //false
 
     // By default, all numbers are comparable, because of;
-    // implicit def eqlNumber: Eql[Number, Number] = derived
+    // implicit def CanEqualNumber: CanEqual[Number, Number] = derived
     println(3 == 5.1) //false
 
     // By default, all Sequences are comparable, because of;
-    // implicit def eqlSeq[T, U](implicit eq: Eql[T, U]): Eql[GenSeq[T], GenSeq[U]] = derived
+    // implicit def CanEqualSeq[T, U](implicit eq: CanEqual[T, U]): CanEqual[GenSeq[T], GenSeq[U]] = derived
     println(List(1, 2) == Vector(1, 2)) //true
 
     //You can establish your own equality by providing a derived
@@ -39,8 +39,8 @@ object MultiversalEquality extends App {
     // scala.language.strictEquality is enabled, therefore we 
     // need some extra delegate instances
     // to compare instances of A and B.
-    given Eql[A, B] = Eql.derived
-    given Eql[B, A] = Eql.derived
+    given CanEqual[A, B] = CanEqual.derived
+    given CanEqual[B, A] = CanEqual.derived
 
     println(a != b)
     println(b == a)

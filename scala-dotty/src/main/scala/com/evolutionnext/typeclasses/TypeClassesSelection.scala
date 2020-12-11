@@ -6,10 +6,10 @@ trait AShow[A] {
 class Artist(val firstName:String, val lastName:String)
 
 object MyPredef {
-   given showArtistFirstThenLast : AShow[Artist] = new AShow[Artist] {
+   given showArtistFirstThenLast as AShow[Artist] = new AShow[Artist] {
       def show(a:Artist):String = s"Artist(${a.firstName} ${a.lastName})"
    }
-   given showArtistLastThenFirst : AShow[Artist] = new AShow[Artist] {
+   given showArtistLastThenFirst as AShow[Artist] = new AShow[Artist] {
       def show(a:Artist):String = s"Artist(${a.lastName}, ${a.firstName})"
    }
 }
