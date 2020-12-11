@@ -1,6 +1,6 @@
 target
 project
-./bloop
-./bsp
-./metals
-./vscode
+.bloop/
+.bsp/
+.metals/
+.vscode/
