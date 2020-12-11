@@ -1,2 +1,6 @@
 target
 project
+./bloop
+./bsp
+./metals
+./vscode
