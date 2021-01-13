@@ -28,5 +28,3 @@ object OpaqueTypes:
     val a:Logarithm = Logarithm(30)
     val b:Logarithm = Logarithm(1)
     println(a + b)
-
-
