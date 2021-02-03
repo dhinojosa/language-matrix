@@ -5,9 +5,14 @@ import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext
 import scala.concurrent.Future
 
+given ec: ExecutionContext = ExecutionContext.Implicits.global
+
 /** Context Functions are functions with only 
  *  context parameters. The are indicated by ? => T
  */
-
-class ContextFunctions extends App:
-  println("To do")
+object ContextFunctions:
+  def f(x: Int): ExecutionContext ?=> Future[Int] = 
+    Future(40 + x)
+  
+  @main def testContextFunction:Unit = 
+    f(10).foreach(println)
