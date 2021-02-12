@@ -1,4 +1,4 @@
-name := "dotty-study"
+name := "language-matrix-scala-dotty"
 
 version := "1.0-SNAPSHOT"
 

@@ -1,4 +1,4 @@
-package com.evolutionnext.abstractdatatypes
+package com.evolutionnext.algebraicdatatypes
 
 /* An enum is perfect for an abstract data type */
 enum Tree[+T] {
@@ -25,16 +25,15 @@ enum Tree[+T] {
  * }
  **/
 
- object AbstractDataTypes extends App {
-   import Tree._
-   val tree = 
-     Branch(left =  
-       Branch(left = Tree.Leaf(40), 
-              right = Branch(
-                         left = Leaf(20), 
-                                Leaf(100))) 
-              , right = Branch(left = Leaf(20), 
-                               right = Leaf(60))
-            )
-   println(tree)
-}
+@main def assertTheADTCanBeApplied:Unit =
+  import Tree._
+  val tree = 
+    Branch(left =
+      Branch(left = Tree.Leaf(40),
+             right = Branch(
+                        left = Leaf(20),
+                               Leaf(100)))
+             , right = Branch(left = Leaf(20),
+                              right = Leaf(60))
+           )
+  println(tree)

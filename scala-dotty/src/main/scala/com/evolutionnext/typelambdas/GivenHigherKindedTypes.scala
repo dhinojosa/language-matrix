@@ -1,12 +1,5 @@
-package com.evolutionnext.givenusing
+package com.evolutionnext.typelambdas
 
-//List[A]
-//what if...C[Int], C[String]
-//List[_]
-//Option[_]
-//Stream[_]
-//Observable[_]
-//Future[_]
 case class Rate(value:Int)
 case class Hours(value:Int)
 
@@ -42,13 +35,13 @@ object Functor:
   def apply[F[_]](using f:Functor[F]) = f
 
 object Ints:
-   given Monoid[Int] with
-     def empty = 0
+  given Monoid[Int] with
+    def empty = 0
 
 object Lists:
   given Functor[List] with
     def fmap[A,B](fa:List[A])(f:A=>B):List[B] = fa.map(f)
-  
+
   given (using fn:Functor[List]):Applicative[List] with
     def fmap[A,B](fa:List[A])(f:A=>B):List[B] = fn.fmap(fa)(f)
     def pure[A](a:A) = List(a)
@@ -61,7 +54,7 @@ object Options:
   import Lists.given
   import Ints.given
   import Options.given
-  import Foldables.given
+  import Foldables.given 
 
   println(calculateTimeSheet(Hours(40)))
   println(summon[Rate])
