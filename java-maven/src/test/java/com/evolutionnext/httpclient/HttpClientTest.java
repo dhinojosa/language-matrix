@@ -27,8 +27,7 @@ import org.reactivestreams.FlowAdapters;
 import javax.net.ssl.SSLContext;
 
 public class HttpClientTest {
-
-
+    
     @Test
     @DisplayName("Run an example connecting to a simple" +
         " web endpoint using GET and returning a String")
