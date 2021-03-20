@@ -24,16 +24,14 @@ object Words:
         .getOrElse(Array.empty[String])
     new Words(words.toSeq, si._2)
 
-object PatternMatchingWords:
+@main def patternMatchingWords:Unit =
+  val books = Seq(
+    "Programming Scala",
+    "JavaScript: The Good Parts",
+    "Scala Cookbook").zipWithIndex // add an "index"
 
-  @main def testMatchingPatterns:Unit =
-    val books = Seq(
-      "Programming Scala",
-      "JavaScript: The Good Parts",
-      "Scala Cookbook").zipWithIndex // add an "index"
+  val result = books.map {
+    case Words(words, index) => s"$index: count = ${words.size}"
+  }
 
-    val result = books.map {
-      case Words(words, index) => s"$index: count = ${words.size}"
-    }
-
-    assert(result == Seq("0: count = 2", "1: count = 4", "2: count = 2"))
+  assert(result == Seq("0: count = 2", "1: count = 4", "2: count = 2"))
