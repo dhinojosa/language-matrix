@@ -7,4 +7,5 @@ project/boot/
 project/plugins/project/
 .history
 .cache
-.lib/
+.lib/.bsp/
+.bsp/
