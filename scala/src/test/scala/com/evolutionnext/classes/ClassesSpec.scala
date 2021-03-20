@@ -41,15 +41,6 @@ class ClassesSpec extends FunSuite with Matchers {
     stamp.age should be(4)
   }
 
-  test("""Use the companion object to create the stamp.
-         |  This test will fail on Jan 1, 2019.
-         |  This is moreso an integration""".stripMargin) {
-    val stamp = Stamp("Jimi Hendrix", 2014)
-    stamp.theme should be("Jimi Hendrix")
-    stamp.year should be(2014)
-    stamp.age should be(6) //fail on 2019
-  }
-
   test("""Case classes have automatic functionality for getters, toString,
           |  equals, hashCode, apply,
           |  and basic pattern matching""".stripMargin) {
