@@ -27,9 +27,6 @@ class StringFormatSpec extends FunSpec with Matchers {
       import java.time._
       val result = "We will be eating lunch on %1$tB the %1$te in the year %1$tY.".format(LocalDate.of(2020, 11, 16))
       result should be("We will be eating lunch on November the 16 in the year 2020.")
-
-      val result2 = String.format("We will be eating lunch on %1$tB the %1$te in the year %1$tY.", LocalDate.now)
-      result2 should be("We will be eating lunch on November the 16 in the year 2020.")
     }
 
     it("""can be used with StripMargin""") {
