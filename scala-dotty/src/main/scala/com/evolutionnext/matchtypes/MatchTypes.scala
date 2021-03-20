@@ -1,15 +1,22 @@
 package com.evolutionnext.matchtypes
 
-object MatchTypes:
-  type Elem[X] = X match
-    case String => Char
-    case Array[t] => t
-    case Iterable[t] => t
+type Production[X] = X match
+  case Int         => String
+  case String      => Long
+  case List[t]     => t
 
-  @main def testMatchTypes:Unit =
-    val m:Elem[String] = 'x'
-    val n:Elem[Array[String]] = "Hello"
-    println(m)
-    println(n.getClass.getSimpleName)
+object SomeRunner:
+  def foo[A](a:A):Production[A] =
+    a match
+      case x:Int      => (x + 1).toString
+      case s:String   => s.length.toLong
+      case xs:List[t] => xs.head
 
-end MatchTypes
+@main def testMatchTypes:Unit =
+  val result:String  = SomeRunner.foo(30)
+  val result2:Long   = SomeRunner.foo("Awesome")
+  val result3:Int    = SomeRunner.foo(List(1,2,3,4))
+
+  println(result)
+  println(result2)
+  println(result3)

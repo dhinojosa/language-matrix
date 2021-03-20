@@ -13,6 +13,6 @@ given ec: ExecutionContext = ExecutionContext.Implicits.global
 object ContextFunctions:
   def f(x: Int): ExecutionContext ?=> Future[Int] = 
     Future(40 + x)
-  
+
   @main def testContextFunction:Unit = 
     f(10).foreach(println)
