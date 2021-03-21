@@ -82,6 +82,11 @@
             <version>1.15.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>17.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -98,8 +103,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>15</source>
-                    <target>15</target>
+                    <source>16</source>
+                    <target>16</target>
+                    <compilerArgs>-Xlint:preview</compilerArgs>
+                    <compilerArgs>-Xlint:removal</compilerArgs>
+                    <compilerArgs>-Xlint:unchecked</compilerArgs>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
