@@ -91,7 +91,7 @@ public class FunctionsTest {
     public void testMethodReferenceANewType() {
         List<Integer> numbers = Arrays.asList(2, 4, 5, 1, 9, 15, 19,
             21, 33, 78, 93, 10);
-        System.out.println(Functions.myMap(numbers, Double::new));
+        System.out.println(Functions.myMap(numbers, Dollars::new));
     }
 
     @Test
