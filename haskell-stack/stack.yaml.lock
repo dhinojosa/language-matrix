@@ -3,7 +3,42 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: hindent-5.3.2@sha256:070a3622d13e6f0c44d8d189df8f780f61d0b813435a902925ef6d9386b42260,3610
+    pantry-tree:
+      size: 1027
+      sha256: 36f9c65bbe71c49741c20839606494dacd70c04e0e70649f1da0978aeaf5f77a
+  original:
+    hackage: hindent-5.3.2@sha256:070a3622d13e6f0c44d8d189df8f780f61d0b813435a902925ef6d9386b42260,3610
+- completed:
+    hackage: hlint-2.2.11@sha256:f4eef0d718264824254bf375a85a91a8756b20c4f7d2a4854ffe4e69e8bd1679,4069
+    pantry-tree:
+      size: 5014
+      sha256: f75f1e4185337aa32610ec7710d12e5d2b9c79292fa8a08348580861c99c6826
+  original:
+    hackage: hlint-2.2.11@sha256:f4eef0d718264824254bf375a85a91a8756b20c4f7d2a4854ffe4e69e8bd1679,4069
+- completed:
+    hackage: stylish-haskell-0.9.4.4@sha256:ea514922e47ea05a924355a841abd26d18101037c46fbb90e201ae83582a8728,4953
+    pantry-tree:
+      size: 2863
+      sha256: 90316b02f585d82d84f90a393d838e9ae1603fd5c0a01f216459ab56f7dc8cfb
+  original:
+    hackage: stylish-haskell-0.9.4.4@sha256:ea514922e47ea05a924355a841abd26d18101037c46fbb90e201ae83582a8728,4953
+- completed:
+    hackage: ghc-lib-parser-ex-8.8.5.8@sha256:04f164fd6a4a5b0c5627cf7fadd79174c3b1d4c696dc481a9909266bd6a2a6aa,2760
+    pantry-tree:
+      size: 1453
+      sha256: 7b861387a0e0d668b77f1019ed57728d9d3136e489158716fc22077034a0d3d3
+  original:
+    hackage: ghc-lib-parser-ex-8.8.5.8@sha256:04f164fd6a4a5b0c5627cf7fadd79174c3b1d4c696dc481a9909266bd6a2a6aa,2760
+- completed:
+    hackage: haskell-src-exts-1.22.0@sha256:f558923a9c8f57402c33a8cc871b934027a5c65414404c87239f6cbd7357d54e,4541
+    pantry-tree:
+      size: 96940
+      sha256: 597b6f48bd409a4d0da013c4e356945c42e0d098966035d3aa68cd4a3ccd66c9
+  original:
+    hackage: haskell-src-exts-1.22.0@sha256:f558923a9c8f57402c33a8cc871b934027a5c65414404c87239f6cbd7357d54e,4541
 snapshots:
 - completed:
     size: 532177
