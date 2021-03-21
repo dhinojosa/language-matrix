@@ -1,10 +1,13 @@
-module Main (main) where
+module Main
+  ( main
+  ) where
 
+import           Data.List.Extra
 import qualified HigherOrderFunctionsSpec
 import qualified RecordSyntaxSpec
-import Test.HUnit
-import Data.List.Extra
+import           Test.HUnit
 
 main :: IO Counts
-main = do runTestTT $ HigherOrderFunctionsSpec.testList
-          runTestTT $ RecordSyntaxSpec.testList
+main = do
+  runTestTT HigherOrderFunctionsSpec.testList
+  runTestTT RecordSyntaxSpec.testList
