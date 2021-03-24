@@ -11,6 +11,7 @@ import           Control.Exception.Base (assert)
 -- `Show` is a type class that provides an automatic string descriptor.
 -- This is the same example from algebraic_data_types/AlgebraicDataTypes.hs
 -- but simplified
+
 import           Data.Maybe
 import           Test.HUnit
 import           Test.HUnit.Text

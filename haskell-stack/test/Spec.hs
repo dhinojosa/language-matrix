@@ -2,12 +2,13 @@ module Main
   ( main
   ) where
 
-import           Data.List.Extra
 import qualified HigherOrderFunctionsSpec
 import qualified RecordSyntaxSpec
+import qualified AlgebraicDataTypesSpec
 import           Test.HUnit
 
 main :: IO Counts
 main = do
-  runTestTT HigherOrderFunctionsSpec.testList
-  runTestTT RecordSyntaxSpec.testList
+  _ <- runTestTT HigherOrderFunctionsSpec.testList
+  _ <- runTestTT RecordSyntaxSpec.testList
+  runTestTT AlgebraicDataTypesSpec.testList

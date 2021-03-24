@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7a58786817d6bf90dee34cb1490220c9390a1e8147d47990866f32ffbc081e9f
+-- hash: 15538ab9f6654e224fe80674f4dc87dc3ffcc8713222fbb70e09ee4a096edf71
 
 name:           haskell-stack
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Shapes
   other-modules:
       Paths_haskell_stack
   hs-source-dirs:
@@ -54,6 +55,7 @@ test-suite haskell-stack-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      AlgebraicDataTypesSpec
       HigherOrderFunctionsSpec
       RecordSyntaxSpec
       Paths_haskell_stack
