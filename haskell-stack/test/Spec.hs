@@ -2,9 +2,9 @@ module Main
   ( main
   ) where
 
+import qualified AlgebraicDataTypesSpec
 import qualified HigherOrderFunctionsSpec
 import qualified RecordSyntaxSpec
-import qualified AlgebraicDataTypesSpec
 import           Test.HUnit
 
 main :: IO Counts

@@ -11,7 +11,6 @@ import           Control.Exception.Base (assert)
 -- `Show` is a type class that provides an automatic string descriptor.
 -- This is the same example from algebraic_data_types/AlgebraicDataTypes.hs
 -- but simplified
-
 import           Data.Maybe
 import           Test.HUnit
 import           Test.HUnit.Text
@@ -59,7 +58,7 @@ carlTheSlouch =
     { ssn = "001-30-3032"
     , addresses = ["803 Amber Lane", "Apt B", "Little Rock", "AR"]
     , firstName = "Carl"
-    , middleName = (Just "Landeau")
+    , middleName = Just "Landeau"
     , lastName = "McInroy"
     }
 
