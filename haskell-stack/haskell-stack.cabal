@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: de050968695af47a0e4c28c93d149b6f845b390e48a0aa23af4500364b221e8f
+-- hash: 47069534e39962bd3044b6d378737e0c0147fc4a6c7892c4cf17b9f627bffbd1
 
 name:           haskell-stack
 version:        0.1.0.0
@@ -59,6 +59,7 @@ test-suite haskell-stack-test
       ForComprehensionsSpec
       HigherOrderFunctionsSpec
       RecordSyntaxSpec
+      WHNFSpec
       Paths_haskell_stack
   hs-source-dirs:
       test
