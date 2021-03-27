@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 15538ab9f6654e224fe80674f4dc87dc3ffcc8713222fbb70e09ee4a096edf71
+-- hash: de050968695af47a0e4c28c93d149b6f845b390e48a0aa23af4500364b221e8f
 
 name:           haskell-stack
 version:        0.1.0.0
@@ -56,6 +56,7 @@ test-suite haskell-stack-test
   main-is: Spec.hs
   other-modules:
       AlgebraicDataTypesSpec
+      ForComprehensionsSpec
       HigherOrderFunctionsSpec
       RecordSyntaxSpec
       Paths_haskell_stack
