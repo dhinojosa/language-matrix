@@ -3,11 +3,12 @@ module Main
   ) where
 
 import qualified AlgebraicDataTypesSpec
+import qualified ApplicativeFunctorsSpec
 import qualified ForComprehensionsSpec
 import qualified HigherOrderFunctionsSpec
 import qualified RecordSyntaxSpec
-import qualified WHNFSpec
 import           Test.HUnit
+import qualified WHNFSpec
 
 main :: IO Counts
 main = do
@@ -15,4 +16,5 @@ main = do
   _ <- runTestTT RecordSyntaxSpec.testList
   _ <- runTestTT AlgebraicDataTypesSpec.testList
   _ <- runTestTT ForComprehensionsSpec.testList
-  runTestTT WHNFSpec.testList  
+  _ <- runTestTT ApplicativeFunctorsSpec.testList
+  runTestTT WHNFSpec.testList
