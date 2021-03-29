@@ -2,8 +2,6 @@ module RecordSyntaxSpec
   ( testList
   ) where
 
-import           Control.Exception.Base (assert)
-
 -- Using an algebraic type but with record syntax to avoid creating pattern
 -- matching to get information from the type. In this case various ways to
 -- create an Employee with functions to obtain items.
@@ -11,9 +9,7 @@ import           Control.Exception.Base (assert)
 -- `Show` is a type class that provides an automatic string descriptor.
 -- This is the same example from algebraic_data_types/AlgebraicDataTypes.hs
 -- but simplified
-import           Data.Maybe
 import           Test.HUnit
-import           Test.HUnit.Text
 
 type FirstName = String
 
