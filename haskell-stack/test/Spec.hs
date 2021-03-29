@@ -7,8 +7,8 @@ import qualified ApplicativeFunctorsSpec
 import qualified ForComprehensionsSpec
 import qualified HigherOrderFunctionsSpec
 import qualified RecordSyntaxSpec
-import qualified WhereSpec
 import           Test.HUnit
+import qualified WhereSpec
 import qualified WHNFSpec
 
 main :: IO Counts
