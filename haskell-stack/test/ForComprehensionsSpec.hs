@@ -1,3 +1,5 @@
+{-# LANGUAGE RankNTypes #-}
+
 module ForComprehensionsSpec
   ( testList
   ) where
@@ -9,7 +11,7 @@ myZip as bs = [(x, y) | x <- as, y <- bs]
 
 -- for comprehension are great for lists, but are underused since it
 -- can only work for lists
-monadicMyZip :: [a] -> [b] -> [(a, b)]
+monadicMyZip :: forall a b. [a] -> [b] -> [(a, b)]
 monadicMyZip as bs = do
   a <- as
   b <- bs
@@ -18,7 +20,10 @@ monadicMyZip as bs = do
 myZipTest :: Test
 myZipTest =
   TestCase
-    (assertEqual "myZip" [(1, 5), (1, 6), (2, 5), (2, 6)] (myZip [1, 2] [5, 6]))
+    (assertEqual
+       "myZip"
+       [(1, 5), (1, 6), (2, 5), (2, 6)]
+       (myZip [1 :: Int, 2] [5 :: Int, 6]))
 
 monadicMyZipTest :: Test
 monadicMyZipTest =
@@ -26,7 +31,7 @@ monadicMyZipTest =
     (assertEqual
        "monadicMyZip"
        [(1, 5), (1, 6), (2, 5), (2, 6)]
-       (monadicMyZip [1, 2] [5, 6]))
+       (monadicMyZip [1 :: Int, 2] [5 :: Int, 6]))
 
 testList :: Test
 testList = TestList [myZipTest, monadicMyZipTest]
