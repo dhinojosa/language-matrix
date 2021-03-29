@@ -2,9 +2,6 @@ module ApplicativeFunctorsSpec
   ( testList
   ) where
 
-import           Control.Applicative
-import           Control.Exception
-
 import           Test.HUnit
 
 -- Applicative Functors are an extension of
@@ -47,7 +44,7 @@ maybeTest2 =
     (assertEqual
        "Testing Two Applicatives where one is Nothing is should be Nothing"
        Nothing
-       (Just (+ 4) <*> Nothing))
+       (Just (+ (4 :: Int)) <*> Nothing))
 
 maybeTest3 :: Test
 maybeTest3 =
@@ -55,7 +52,7 @@ maybeTest3 =
     (assertEqual
        "Applicative that adds four is applied to a pure 3"
        (Just 7)
-       (Just (+ 4) <*> pure 3))
+       (Just (+ (4 :: Int)) <*> pure 3))
 
 maybeTest4 :: Test
 maybeTest4 =
@@ -63,7 +60,7 @@ maybeTest4 =
     (assertEqual
        "Multipart Applicative with * then applying two Justs"
        (Just 40)
-       (pure (*) <*> Just 4 <*> Just 10))
+       ((*) <$> Just (4 :: Int) <*> Just 10))
 
 maybeTest5 :: Test
 maybeTest5 =
@@ -71,7 +68,7 @@ maybeTest5 =
     (assertEqual
        "Multipart Applicative with + then applying two Justs"
        (Just 14)
-       (pure (+) <*> Just 4 <*> Just 10))
+       ((+) <$> Just (4 :: Int) <*> Just 10))
 
 -- Applicative also has another method that looks very
 -- similar to function application ($)
@@ -80,7 +77,10 @@ maybeTest5 =
 applicativeApplyTest :: Test
 applicativeApplyTest =
   TestCase
-    (assertEqual "Applicatives Apply Method" (Just 40) ((* 10) <$> Just 4))
+    (assertEqual
+       "Applicatives Apply Method"
+       (Just 40)
+       ((* (10 :: Int)) <$> Just 4))
 
 -- Using the List Applicative instance implementation:
 -- instance Applicative [] where
@@ -92,7 +92,7 @@ listTest1 =
     (assertEqual
        "List Applicatives with single argument"
        [11, 12, 13, 21, 22, 23]
-       ([(+ 10), (+ 20)] <*> [1, 2, 3]))
+       ([(+ (10 :: Int)), (+ 20)] <*> [1, 2, 3]))
 
 listTest2 :: Test
 listTest2 =
@@ -100,7 +100,7 @@ listTest2 =
     (assertEqual
        "List Applicatives with two arguments"
        [5, 4, 10, 8, 6, 5, 7, 6]
-       ([(*), (+)] <*> [1, 2] <*> [5, 4]))
+       ([(*), (+)] <*> [1 :: Int, 2] <*> [5, 4]))
 
 -- Using the Function Applicative instance implementation:
 -- instance Applicative ((->) r) where
@@ -112,7 +112,10 @@ pure2Function = pure 4 :: ((->) r) Int
 functionTest1 :: Test
 functionTest1 =
   TestCase
-    (assertEqual "Using an applicative with a function" 4 (pure2Function 4))
+    (assertEqual
+       "Using an applicative with a function"
+       4
+       (pure2Function (4 :: Int)))
 
 -- Note the reason why (+1) <*> (*10) by itself will not work is:
 -- Given let z = (+1) <*> (*10) that will translate to (\x -> (+1) x ((*10) x))
@@ -126,15 +129,15 @@ functionTest2 =
     (assertEqual
        "Evaluating a complicated applicative"
        45
-       ((+) <$> (+ 1) <*> (* 10) $ 4))
+       ((+) <$> (+ (1 :: Int)) <*> (* 10) $ 4))
 
 functionTest3 :: Test
 functionTest3 =
   TestCase
     (assertEqual
        "Performing Multilayered Applicative"
-       [8.0, 10.0, 2.5]
-       ((\x y z -> [x, y, z]) <$> (+ 3) <*> (* 2) <*> (/ 2) $ 5))
+       [8, 10, 2.5]
+       ((\x y z -> [x, y, z]) <$> (+ (3 :: Double)) <*> (* 2) <*> (/ 2) $ 5))
 
 testList :: Test
 testList =
