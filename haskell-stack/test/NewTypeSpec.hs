@@ -80,6 +80,17 @@ testUsingPatternMatchingUndefined =
        "Got a Bulgarian"
        (usePatternMatchingB undefined))
 
+-- The following will not pass since the not using
+-- newtype there is no laziness and undefined will
+-- throw an error.
+testUsingPatternMatchingRomanianUndefined :: Test
+testUsingPatternMatchingRomanianUndefined =
+  TestCase
+    (assertEqual
+       "Test Pattern Matching an undefined"
+       "Got a Romanian"
+       (usePatternMatchingR undefined))
+
 testList :: Test
 testList =
   TestList
