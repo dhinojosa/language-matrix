@@ -6,6 +6,7 @@ import qualified AlgebraicDataTypesSpec
 import qualified ApplicativeFunctorsSpec
 import qualified ForComprehensionsSpec
 import qualified HigherOrderFunctionsSpec
+import qualified NewTypeSpec
 import qualified RecordSyntaxSpec
 import           Test.HUnit
 import qualified WhereSpec
@@ -19,4 +20,5 @@ main = do
   _ <- runTestTT ForComprehensionsSpec.testList
   _ <- runTestTT ApplicativeFunctorsSpec.testList
   _ <- runTestTT WhereSpec.testList
+  _ <- runTestTT NewTypeSpec.testList
   runTestTT WHNFSpec.testList
