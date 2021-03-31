@@ -10,18 +10,18 @@ myMax :: (Ord a) => [a] -> Maybe a
 myMax [] = Nothing
 myMax [x] = Just x
 myMax (x:xs)
-  | item > last = Just item
-  | otherwise = Just last
+  | item > lastItem = Just item
+  | otherwise = Just lastItem
   where
     item = x
-    Just last = myMax xs -- Pattern matched here
+    Just lastItem = myMax xs -- Pattern matched here
 
 testMyMax1 :: Test
 testMyMax1 =
   TestCase
     (assertEqual
        "Pattern Matching with Where"
-       (Just 100)
+       (Just (100 :: Int))
        (myMax [1, 5, 13, 42, 5, 3, 1, -3, 100, 22, 10, -40]))
 
 testMyMax2 :: Test
@@ -37,12 +37,13 @@ testMyMax3 =
   TestCase
     (assertEqual
        "Pattern Matching result with single element"
-       (Just 1)
+       (Just (1 :: Int))
        (myMax [1]))
 
 testMyMax4 :: Test
 testMyMax4 =
-  TestCase (assertEqual "Test with 3 elements" (Just 4) (myMax [-3, 4, 1]))
+  TestCase
+    (assertEqual "Test with 3 elements" (Just (4 :: Int)) (myMax [-3, 4, 1]))
 
 testList :: Test
 testList = TestList [testMyMax1, testMyMax2, testMyMax3, testMyMax4]
