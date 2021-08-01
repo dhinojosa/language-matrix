@@ -1,10 +1,9 @@
 package com.evolutionnext.algebraicdatatypes
 
 /* An enum is perfect for an abstract data type */
-enum Tree[+T] {
-  case Branch(left: Tree[T], right:Tree[T])
+enum Tree[+T]:
+  case Branch(left: Tree[T], right: Tree[T])
   case Leaf(value: T)
-}
 
 /* The above will create all the basic extensions
  * required. For example:
@@ -25,15 +24,10 @@ enum Tree[+T] {
  * }
  **/
 
-@main def assertTheADTCanBeApplied:Unit =
-  import Tree._
-  val tree = 
-    Branch(left =
-      Branch(left = Tree.Leaf(40),
-             right = Branch(
-                        left = Leaf(20),
-                               Leaf(100)))
-             , right = Branch(left = Leaf(20),
-                              right = Leaf(60))
-           )
+@main def assertTheADTCanBeApplied: Unit =
+  import Tree.*
+  val tree =
+    Branch(left = Branch(left = Tree.Leaf(40), right = Branch(left = Leaf(20), Leaf(100))),
+           right = Branch(left = Leaf(20), right = Leaf(60))
+    )
   println(tree)

@@ -1,9 +1,8 @@
-package com.evolutionnext.traitparameters
+package com.evolutionnext.extensionmethods
 
-class TraitParametersSuite extends munit.FunSuite  {
-    test("hello") {
-        val obtained = 42
-        val expected = 43
-        assertEquals(obtained, expected)
-    }
-}
+class ExtensionMethodsSuite extends munit.FunSuite:
+  test("hello") {
+    val obtained = 42
+    val expected = 42
+    assertEquals(obtained, expected)
+  }

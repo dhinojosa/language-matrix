@@ -9,7 +9,7 @@ object TypeLambdasWithConversion extends App:
   given Conv[Int] = _.asInstanceOf[Int]
   given Conv[Double] = _.asInstanceOf[Double]
   given Conv[String] = _.asInstanceOf[String]
-  
-  val x:Any = 40
-  val y:Int = x
+
+  val x: Any = 40
+  val y: Int = x
   println(y)
