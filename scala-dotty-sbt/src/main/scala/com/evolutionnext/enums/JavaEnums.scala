@@ -25,11 +25,10 @@ enum JavaPlanet(val mass: Double, val radius: Double) extends java.lang.Enum[Jav
   case Neptune extends JavaPlanet(1.024e+26, 2.4746e7)
 
 object JavaEnums extends App:
+  import JavaPlanet.*
   val m = JavaColor.Red
   println(m)
   val g = JavaColor.Green
   println(g == g)
-
-  import JavaPlanet.*
   val planet = Mars
   println(planet)

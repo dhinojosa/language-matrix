@@ -3,7 +3,7 @@ package com.evolutionnext.exports
 import java.time.LocalDate
 
 class CalendarEntry(private val localDate: LocalDate, val name: String):
-  export localDate.{getDayOfMonth, getDayOfWeek, getDayOfYear}
+  import localDate.{getDayOfMonth, getDayOfWeek, getDayOfYear}
 
 @main def assertThatAnExportTreatsDelegation: Unit =
   val entry = LocalDate.now() match
