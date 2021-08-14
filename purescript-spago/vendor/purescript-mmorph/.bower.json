@@ -1,0 +1,37 @@
+{
+  "name": "purescript-mmorph",
+  "version": "6.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "psc.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Thimoteus/purescript-mmorph.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "purescript-transformers": "^5.0.0",
+    "purescript-functors": "^4.0.0",
+    "purescript-free": "^6.0.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^5.0.0"
+  },
+  "homepage": "https://github.com/Thimoteus/purescript-mmorph",
+  "_release": "6.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.0.0",
+    "commit": "ebe16afbfa16dd600f3379ccedc7529417402393"
+  },
+  "_source": "https://github.com/Thimoteus/purescript-mmorph.git",
+  "_target": "v6.0.0",
+  "_originalSource": "purescript-mmorph"
+}

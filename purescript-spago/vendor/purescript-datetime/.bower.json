@@ -1,0 +1,50 @@
+{
+  "name": "purescript-datetime",
+  "homepage": "https://github.com/purescript/purescript-datetime",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-datetime.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-bifunctors": "^5.0.0",
+    "purescript-control": "^5.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-enums": "^5.0.0",
+    "purescript-foldable-traversable": "^5.0.0",
+    "purescript-functions": "^5.0.0",
+    "purescript-gen": "^3.0.0",
+    "purescript-integers": "^5.0.0",
+    "purescript-lists": "^6.0.0",
+    "purescript-math": "^3.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-newtype": "^4.0.0",
+    "purescript-ordered-collections": "^2.0.0",
+    "purescript-partial": "^3.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-tuples": "^6.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0",
+    "purescript-strings": "^5.0.0"
+  },
+  "version": "5.0.2",
+  "_release": "5.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.2",
+    "commit": "fcd801af2e86d7ffbbc3a3fde7db1b464cbdd51b"
+  },
+  "_source": "https://github.com/purescript/purescript-datetime.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-datetime"
+}

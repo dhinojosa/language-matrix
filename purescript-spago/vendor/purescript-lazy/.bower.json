@@ -1,0 +1,38 @@
+{
+  "name": "purescript-lazy",
+  "homepage": "https://github.com/purescript/purescript-lazy",
+  "authors": [
+    "Phil Freeman <paf31@cantab.net>",
+    "Gary Burgess <gary.burgess@gmail.com>",
+    "John A. De Goes <john@degoes.net>"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-lazy.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-control": "^5.0.0",
+    "purescript-foldable-traversable": "^5.0.0",
+    "purescript-invariant": "^5.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "2f73f61e7ac1ae1cfe05564112e3313530e673ff"
+  },
+  "_source": "https://github.com/purescript/purescript-lazy.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-lazy"
+}

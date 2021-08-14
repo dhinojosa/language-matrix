@@ -1,0 +1,33 @@
+{
+  "name": "purescript-profunctor",
+  "homepage": "https://github.com/purescript/purescript-profunctor",
+  "authors": [
+    "Hardy Jones <jones3.hardy@gmail.com>",
+    "Sean Chalmers <sclhiannan@gmail.com>",
+    "Phil Freeman <paf31@cantab.net>"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-profunctor.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-control": "^5.0.0",
+    "purescript-distributive": "^5.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-exists": "^5.0.0",
+    "purescript-invariant": "^5.0.0",
+    "purescript-newtype": "^4.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-tuples": "^6.0.0"
+  }
+}

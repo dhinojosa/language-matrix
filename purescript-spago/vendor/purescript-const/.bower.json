@@ -1,0 +1,38 @@
+{
+  "name": "purescript-const",
+  "homepage": "https://github.com/purescript/purescript-const",
+  "authors": [
+    "Hardy Jones <jones3.hardy@gmail.com>",
+    "Gary Burgess <gary.burgess@gmail.com>",
+    "Sean Chalmers <sclhiannan@gmail.com>"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-const.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-invariant": "^5.0.0",
+    "purescript-newtype": "^4.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "3a3a4bdc44f71311cf27de9bd22039b110277540"
+  },
+  "_source": "https://github.com/mankyKitty/purescript-const.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-const"
+}

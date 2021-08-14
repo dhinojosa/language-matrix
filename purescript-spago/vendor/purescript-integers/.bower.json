@@ -1,0 +1,39 @@
+{
+  "name": "purescript-integers",
+  "homepage": "https://github.com/purescript/purescript-integers",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-integers.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-math": "^3.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-numbers": "^8.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0",
+    "purescript-partial": "^3.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "8a783f2d92596c43afca53066ac18eb389d15981"
+  },
+  "_source": "https://github.com/purescript/purescript-integers.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-integers"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "purescript-prelude",
+  "homepage": "https://github.com/purescript/purescript-prelude",
+  "description": "The PureScript Prelude",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-prelude.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "version": "5.0.1",
+  "_release": "5.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.1",
+    "commit": "68f8012bc2309d9bf5832cdf7316ad052d586905"
+  },
+  "_source": "https://github.com/purescript/purescript-prelude.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-prelude"
+}

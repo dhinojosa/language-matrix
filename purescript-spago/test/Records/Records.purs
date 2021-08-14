@@ -1,13 +1,19 @@
-module Test.Records.Records where
+module Test.Records.Records (recordSpec) where
 
-import Prelude (Unit, (==))
+import Prelude (Unit, (==), ($), pure, unit)
 import Records.Records
-import Effect (Effect)
+import Effect
 import Test.Assert (assert)
 import Data.Maybe (Maybe(..))
+import Effect (Effect)
+import Effect.Aff (launchAff_, delay)
+import Test.Spec (pending, describe, it)
+import Test.Spec.Assertions (shouldEqual)
+import Test.Spec.Reporter.Console (consoleReporter)
+import Test.Spec.Runner (runSpec)
 
 employee :: Employee
-employee = Worker {
+employee = Worker{
   ssn: "132-122-4949",
   firstName: "Bob",
   middleName: (Just "Roasters"),
@@ -15,6 +21,7 @@ employee = Worker {
   addresses: ["123 Main St"]
 }
 
-main :: Effect Unit
-main = do
-   assert ("Hello2" == "Hello")
+recordSpec =
+   describe "A record is a structure with data" do
+      it "can be accessed" do
+         (firstName employee) `shouldEqual` "Bob"

@@ -1,0 +1,29 @@
+{
+  "name": "purescript-partial",
+  "homepage": "https://github.com/purescript/purescript-partial",
+  "description": "Utilities for working with partial functions",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-partial.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "version": "3.0.0",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "2f0a5239efab68179a684603263bcec8f1489b08"
+  },
+  "_source": "https://github.com/purescript/purescript-partial.git",
+  "_target": "^3.0.0",
+  "_originalSource": "purescript-partial"
+}

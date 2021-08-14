@@ -1,0 +1,45 @@
+{
+  "name": "purescript-tailrec",
+  "homepage": "https://github.com/purescript/purescript-tailrec",
+  "authors": [
+    "Phil Freeman <paf31@cantab.net>"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-tailrec.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-bifunctors": "^5.0.0",
+    "purescript-effect": "^3.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-identity": "^5.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-partial": "^3.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-refs": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0"
+  },
+  "version": "5.0.1",
+  "_release": "5.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.1",
+    "commit": "b557d056c9719351f2b62cf120b1bdaab141e052"
+  },
+  "_source": "https://github.com/paf31/purescript-tailrec.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-tailrec"
+}

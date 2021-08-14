@@ -1,0 +1,33 @@
+{
+  "name": "purescript-tuples",
+  "homepage": "https://github.com/purescript/purescript-tuples",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-tuples.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-control": "^5.0.0",
+    "purescript-invariant": "^5.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "version": "6.0.1",
+  "_release": "6.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.0.1",
+    "commit": "04630b287d453158b2b95c4be695dfe9fdd83a12"
+  },
+  "_source": "https://github.com/purescript/purescript-tuples.git",
+  "_target": "^6.0.0",
+  "_originalSource": "purescript-tuples"
+}

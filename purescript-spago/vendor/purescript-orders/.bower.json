@@ -1,0 +1,36 @@
+{
+  "name": "purescript-orders",
+  "homepage": "https://github.com/purescript/purescript-orders",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-orders.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-newtype": "^4.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "c25b7075426cf82bcb960495f28d2541c9a75510"
+  },
+  "_source": "https://github.com/purescript/purescript-orders.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-orders"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "purescript-foldable-traversable",
+  "homepage": "https://github.com/purescript/purescript-foldable-traversable",
+  "description": "Classes for foldable and traversable data structures",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-foldable-traversable.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-bifunctors": "^5.0.0",
+    "purescript-const": "^5.0.0",
+    "purescript-control": "^5.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-functors": "^4.0.0",
+    "purescript-identity": "^5.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-newtype": "^4.0.0",
+    "purescript-orders": "^5.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-tuples": "^6.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0",
+    "purescript-integers": "^5.0.0",
+    "purescript-math": "^3.0.0",
+    "purescript-unsafe-coerce": "^5.0.0"
+  },
+  "version": "5.0.1",
+  "_release": "5.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.1",
+    "commit": "d50216bb9ddcc49d97f28f6c90be1d9cda54fe3a"
+  },
+  "_source": "https://github.com/purescript/purescript-foldable-traversable.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-foldable-traversable"
+}

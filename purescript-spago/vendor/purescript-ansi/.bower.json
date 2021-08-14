@@ -1,0 +1,37 @@
+{
+  "name": "purescript-ansi",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hdgarrood/purescript-ansi.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-strings": "^5.0.0",
+    "purescript-lists": "^6.0.0",
+    "purescript-foldable-traversable": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^5.0.0",
+    "purescript-psci-support": "^5.0.0"
+  },
+  "homepage": "https://github.com/hdgarrood/purescript-ansi",
+  "version": "6.1.0",
+  "_release": "6.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.1.0",
+    "commit": "f1de026e0401c26240bea93d8aa7ac95c95b531d"
+  },
+  "_source": "https://github.com/hdgarrood/purescript-ansi.git",
+  "_target": "^6.0.0",
+  "_originalSource": "purescript-ansi"
+}

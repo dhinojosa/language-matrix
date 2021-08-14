@@ -1,0 +1,29 @@
+{
+  "name": "purescript-either",
+  "homepage": "https://github.com/purescript/purescript-either",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-either.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-control": "^5.0.0",
+    "purescript-invariant": "^5.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-console": "^5.0.0",
+    "purescript-effect": "^3.0.0"
+  }
+}

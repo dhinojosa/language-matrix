@@ -1,0 +1,35 @@
+{
+  "name": "purescript-contravariant",
+  "homepage": "https://github.com/purescript/purescript-contravariant",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-contravariant.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-const": "^5.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-newtype": "^4.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-tuples": "^6.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "ae1a765f7ddbfd96ae1f12e399e46d554d8e3b38"
+  },
+  "_source": "https://github.com/mankyKitty/purescript-contravariant.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-contravariant"
+}

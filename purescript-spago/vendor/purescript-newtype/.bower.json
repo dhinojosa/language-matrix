@@ -1,0 +1,33 @@
+{
+  "name": "purescript-newtype",
+  "homepage": "https://github.com/purescript/purescript-newtype",
+  "description": "Type class and functions for working with newtypes",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-newtype.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^5.0.0",
+    "purescript-safe-coerce": "^1.0.0"
+  },
+  "version": "4.0.0",
+  "_release": "4.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.0",
+    "commit": "7b292fcd2ac7c4a25d7a7a8d3387d0ee7de89b13"
+  },
+  "_source": "https://github.com/garyb/purescript-newtype.git",
+  "_target": "^4.0.0",
+  "_originalSource": "purescript-newtype"
+}

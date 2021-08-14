@@ -1,0 +1,31 @@
+{
+  "name": "purescript-unsafe-coerce",
+  "homepage": "https://github.com/purescript/purescript-unsafe-coerce",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-unsafe-coerce.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "devDependencies": {
+    "purescript-console": "^5.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "ee24f0d3b94bf925d9c50fcc2b449579580178c0"
+  },
+  "_source": "https://github.com/purescript-contrib/purescript-unsafe-coerce.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-unsafe-coerce"
+}

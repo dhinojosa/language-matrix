@@ -1,0 +1,43 @@
+{
+  "name": "purescript-spec",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "externs",
+    "tmp",
+    "output",
+    "tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript-spec/purescript-spec.git"
+  },
+  "dependencies": {
+    "purescript-avar": "^4.0.0",
+    "purescript-console": "^5.0.0",
+    "purescript-aff": "^6.0.0",
+    "purescript-exceptions": "^5.0.0",
+    "purescript-strings": "^5.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-transformers": "^5.0.0",
+    "purescript-foldable-traversable": "^5.0.0",
+    "purescript-pipes": "^7.0.0",
+    "purescript-ansi": "^6.0.0",
+    "purescript-fork": "^5.0.0",
+    "purescript-now": "^5.0.0"
+  },
+  "homepage": "https://github.com/owickstrom/purescript-spec",
+  "version": "5.0.1",
+  "_release": "5.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.1",
+    "commit": "2cfa11573dbb695c117efce0a8f76a3daba12e87"
+  },
+  "_source": "https://github.com/owickstrom/purescript-spec.git",
+  "_target": "^5.0.1",
+  "_originalSource": "purescript-spec",
+  "_direct": true
+}

@@ -1,0 +1,28 @@
+{
+  "name": "purescript-math",
+  "homepage": "https://github.com/purescript/purescript-math",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-math.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "version": "3.0.0",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "59746cc74e23fb1f04e09342884c5d1e3943a04f"
+  },
+  "_source": "https://github.com/purescript/purescript-math.git",
+  "_target": "^3.0.0",
+  "_originalSource": "purescript-math"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "purescript-exceptions",
+  "homepage": "https://github.com/purescript/purescript-exceptions",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript/purescript-exceptions.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-effect": "^3.0.0",
+    "purescript-either": "^5.0.0",
+    "purescript-maybe": "^5.0.0",
+    "purescript-prelude": "^5.0.0"
+  },
+  "version": "5.0.0",
+  "_release": "5.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.0",
+    "commit": "410d0b8813592bda3c25028540eeb2cda312ddc9"
+  },
+  "_source": "https://github.com/purescript/purescript-exceptions.git",
+  "_target": "^5.0.0",
+  "_originalSource": "purescript-exceptions"
+}
