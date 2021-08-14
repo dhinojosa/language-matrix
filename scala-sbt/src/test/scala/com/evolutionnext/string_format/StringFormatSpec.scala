@@ -1,8 +1,9 @@
 package com.evolutionnext.string_format
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class StringFormatSpec extends FunSpec with Matchers {
+class StringFormatSpec extends AnyFunSpec with Matchers {
   describe("String format") {
     it("can be done in the old Java style") {
       val str = String.format("This is a %s", "test")

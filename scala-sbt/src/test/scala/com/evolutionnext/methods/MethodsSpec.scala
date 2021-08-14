@@ -1,10 +1,11 @@
 package com.evolutionnext.methods
 
-import org.scalatest.{FunSuite, Matchers}
 
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.funsuite.AnyFunSuite
 import scala.annotation.tailrec
 
-class MethodsSpec extends FunSuite with Matchers {
+class MethodsSpec extends AnyFunSuite with Matchers {
   test("In review, a method is structured like the following:") {
     def foo(x:Int):Int = {
       x + 1

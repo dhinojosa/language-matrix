@@ -1,8 +1,9 @@
 package com.evolutionnext.regex
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class RegexSpec extends FunSpec with Matchers {
+class RegexSpec extends AnyFunSpec with Matchers {
   describe("Regular Expressions") {
     it("""A regular expression in scala is a "" or a smart string with
          |  an .r method call to return the regex

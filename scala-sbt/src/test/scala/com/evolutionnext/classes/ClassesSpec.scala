@@ -1,8 +1,9 @@
 package com.evolutionnext.classes
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class ClassesSpec extends FunSuite with Matchers {
+class ClassesSpec extends AnyFunSuite with Matchers {
 
   test("""The following shows how to create a "classic Java" mutable class""") {
     val league = new League("National League")
@@ -42,8 +43,8 @@ class ClassesSpec extends FunSuite with Matchers {
   }
 
   test("""Case classes have automatic functionality for getters, toString,
-          |  equals, hashCode, apply,
-          |  and basic pattern matching""".stripMargin) {
+         |  equals, hashCode, apply,
+         |  and basic pattern matching""".stripMargin) {
     val computer = Computer("Commodore", "64", 1983)
     computer.make should be("Commodore")
     computer.model should be("64")

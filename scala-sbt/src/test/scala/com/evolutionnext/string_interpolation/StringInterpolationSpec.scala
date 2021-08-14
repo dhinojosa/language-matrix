@@ -1,8 +1,9 @@
 package com.evolutionnext.string_interpolation
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class StringInterpolationSpec extends FunSpec with Matchers {
+class StringInterpolationSpec extends AnyFunSpec with Matchers {
   val name = "Albert Einstein"
   val age = 76
 

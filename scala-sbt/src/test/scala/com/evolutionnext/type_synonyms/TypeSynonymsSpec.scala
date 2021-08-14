@@ -1,8 +1,9 @@
 package com.evolutionnext.type_synonyms
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class TypeSynonymsSpec extends FunSpec with Matchers {
+class TypeSynonymsSpec extends AnyFunSpec with Matchers {
   describe("Type Synonyms allows to alias a type with another more defined type") {
     it("""is defined using a type keyword which happens to be in the
           |  type-synonyms package object. Notice here that instead of

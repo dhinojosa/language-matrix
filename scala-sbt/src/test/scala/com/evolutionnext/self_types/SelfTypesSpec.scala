@@ -1,8 +1,9 @@
 package com.evolutionnext.self_types
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SelfTypesSpec extends FunSpec with Matchers {
+class SelfTypesSpec extends AnyFunSpec with Matchers {
     describe("""Self types""") {
       it (
           """is used to delineate that a trait can be inherited __as long__

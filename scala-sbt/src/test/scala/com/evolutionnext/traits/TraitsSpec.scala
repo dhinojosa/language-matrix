@@ -1,9 +1,10 @@
 package com.evolutionnext.traits
 
 import com.evolutionnext.classes.Stamp
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class TraitsSpec extends FunSuite with Matchers {
+class TraitsSpec extends AnyFunSuite with Matchers {
   test(
     """A trait is analogous to an interface in Java. Classes and
       |  objects can extend traits but traits cannot be instantiated

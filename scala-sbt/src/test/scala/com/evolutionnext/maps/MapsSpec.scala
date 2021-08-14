@@ -1,8 +1,10 @@
 package com.evolutionnext.maps
 
-import org.scalatest.{FunSpec, Matchers}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.funsuite.AnyFunSuite
 
-class MapsSpec extends FunSpec with Matchers {
+class MapsSpec extends AnyFunSpec with Matchers {
   describe("Maps") {
     it("""can be created with Map.apply, and since apply is magical and can be
          |  called without the explicit method of apply, we can just call Map object
