@@ -3,7 +3,7 @@ package com.evolutionnext.groovy_interceptable;
 
 import java.time.*;
 
-class Stock implements GroovyInterceptable {
+class Stock extends GroovyInterceptable {
    String name
    private int sharesLeft;
 
