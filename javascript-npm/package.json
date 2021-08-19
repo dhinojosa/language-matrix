@@ -1,0 +1,29 @@
+{
+    "name": "javascript-npm",
+    "version": "1.0.0",
+    "description": "JavaScript Project for Language Matrix",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "mocha --recursive"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dhinojosa/language-matrix.git"
+    },
+    "keywords": [
+        "JavaScript",
+        "Language",
+        "Language",
+        "Matrix"
+    ],
+    "author": "= <=>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dhinojosa/language-matrix/issues"
+    },
+    "homepage": "https://github.com/dhinojosa/language-matrix#readme",
+    "devDependencies": {
+        "mocha": "^9.0.3"
+    }
+}
