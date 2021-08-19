@@ -1,6 +1,7 @@
 
 //Standard Form of create a JavaScript Array
-var a = new Array();
+// noinspection JSPrimitiveTypeWrapperUsage
+const a = new Array();
 a[1] = "One";
 a[2] = "Two";
 a[3] = "Three";
