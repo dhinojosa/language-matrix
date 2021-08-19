@@ -24,4 +24,7 @@ describe("Multimax should find the maximum of the array, " +
     it("should return a 2001 with this long nested array", () => {
         assert.deepEqual(multimax([1, [10,5,-1], [10, 101], 2000, [2001, 0]]), 2001);
     });
+    it("should return a zero if there are heavily nested arrays", () => {
+        assert.deepEqual(multimax([[[], []], []]), 0);
+    });
 });
