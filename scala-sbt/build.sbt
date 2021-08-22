@@ -1,4 +1,4 @@
-name := "language_matrix_scala"
+name := "language-matrix-scala"
 
 version := "1.0-SNAPSHOT"
 
