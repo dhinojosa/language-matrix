@@ -15,7 +15,7 @@ object ExplicitNulls:
     val input: String | Null = "Hello"
     println(input.toOption.map(_ + "!"))
 
-import ExplicitNulls.*
+import com.evolutionnext.explicitnulls.ExplicitNulls.*
 
 @main def dateNow: Unit =
   val dateNow: LocalDate | Null = LocalDate.now
