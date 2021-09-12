@@ -18,7 +18,7 @@ object Logarithms:
     def +(y: Logarithm): Logarithm = Logarithm(math.exp(x) + math.exp(y))
     def *(y: Logarithm): Logarithm = Logarithm(x + y)
 
-@main def assertThatOpaqueTypesWork: Unit =
+@main def assertThatLogarithmOpaqueTypesWork: Unit =
   import Logarithms.*
   //Supress the string append method
   import Predef.{any2stringadd as _, *}
