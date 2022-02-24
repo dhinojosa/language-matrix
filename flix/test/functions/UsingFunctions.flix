@@ -1,5 +1,28 @@
 use MyFunctions.multiply;
 
+/**
+ * A function, just like this test method, 
+ * can have multiple lines, but all lines that
+ * are followed by another line must terminate with
+ * a semicolon. Notice there is one inline function
+ * that ends in a semicolon. That is followed by a function
+ * call in the last line with no semicolon.
+ */
+@test
+def usingFunctionWithTwoLinesAndBracket():Bool = {
+   let addTwoNumbers = (x:Int32, y:Int32) -> x + y;
+   addTwoNumbers(3, 10) == 13
+}
+
+/**
+ * Same test as above, but no brackets. Still works
+ */
+@test
+def usingFunctionWithTwoLinesAndNoBracket():Bool =
+   let addTwoNumbers = (x:Int32, y:Int32) -> x + y;
+   addTwoNumbers(3, 10) == 13
+
+
 /** 
  * The following is using brackets
  * around the function, which seems to work
