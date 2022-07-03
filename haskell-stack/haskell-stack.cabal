@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 72ac3da64cec625c1dbe09a83b2c92b49c9c48f5f4a7468ff2a4f9173cea2044
+-- hash: 59d266ced8e326737aa9475c49ec0b4a754e82907c262df64a82be6cb1d17446
 
 name:           haskell-stack
 version:        0.1.0.0
@@ -57,6 +57,7 @@ test-suite haskell-stack-test
   other-modules:
       AlgebraicDataTypesSpec
       ApplicativeFunctorsSpec
+      CaseSpec
       ForComprehensionsSpec
       HigherOrderFunctionsSpec
       NewTypeSpec
