@@ -1,19 +1,11 @@
 package com.evolutionnext.jdbc;
 
-import com.mysql.cj.jdbc.MysqlDataSource;
-
-import javax.sql.DataSource;
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetFactory;
 import javax.sql.rowset.RowSetProvider;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UsingRowSets {
-
-
     public static void main(String[] args) throws SQLException,
         ClassNotFoundException {
         if (args.length != 2) {
