@@ -1,5 +1,5 @@
 [package]
-name = "rust_language_matrix"
+name = "rust_cargo_language_matrix"
 version = "0.1.0"
 authors = ["Daniel Hinojosa <dhinojosa@evolutionnext.com>"]
 edition = "2018"
