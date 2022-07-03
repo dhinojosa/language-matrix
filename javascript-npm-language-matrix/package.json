@@ -1,5 +1,5 @@
 {
-    "name": "javascript-npm",
+    "name": "javascript-npm-language-matrix",
     "version": "1.0.0",
     "description": "JavaScript Project for Language Matrix",
     "main": "index.js",
@@ -22,7 +22,7 @@
     "bugs": {
         "url": "https://github.com/dhinojosa/language-matrix/issues"
     },
-    "homepage": "https://github.com/dhinojosa/language-matrix#readme",
+    "homepage": "https://github.com/dhinojosa/language-matrix/javascript-npm-language-matrix#readme",
     "devDependencies": {
         "mocha": "^9.0.3"
     }
