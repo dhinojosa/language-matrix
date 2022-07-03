@@ -6,3 +6,4 @@
 **/*.class
 **/.srcList
 **/tags
+cpp-make/cmake-build-debug
