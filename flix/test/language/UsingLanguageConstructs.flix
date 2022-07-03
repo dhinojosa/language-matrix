@@ -25,3 +25,16 @@ def usingCustomInfixFunctions():Bool & Pure =
 def usingInfixFunctionWithUse(): Bool & Pure =
    use MyFunctions.multiply;
    (3 `multiply` 5) == 15
+
+/**
+  * Symbolic Functions have the ability to be infix
+  */
+@test
+def usingSymbolicFunctions():Bool & Pure = 
+   use MyFunctions.<><;
+   (10 <>< 4) == 400
+
+@test
+def usingSymbolicFunctionsInAFunction():Bool & Pure = 
+   def <><(x:Int32, y:Int32) = x * x * y;
+   (10 <>< 4) == 400
