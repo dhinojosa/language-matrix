@@ -1,4 +1,4 @@
-module Records.Records where
+module Records.Records (Employee(..), FirstName, LastName, MiddleName, SSN, Address) where
 
 import Data.Maybe
 import Data.Generic.Rep (class Generic)

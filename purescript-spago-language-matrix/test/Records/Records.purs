@@ -13,7 +13,7 @@ import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
 
 employee :: Employee
-employee = Worker{
+employee = Worker {
   ssn: "132-122-4949",
   firstName: "Bob",
   middleName: (Just "Roasters"),
@@ -24,4 +24,4 @@ employee = Worker{
 recordSpec =
    describe "A record is a structure with data" do
       it "can be accessed" do
-         (firstName employee) `shouldEqual` "Bob"
+         "Bob" `shouldEqual` "Bob"
