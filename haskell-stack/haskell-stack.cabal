@@ -58,6 +58,8 @@ test-suite haskell-stack-test
       AlgebraicDataTypesSpec
       ApplicativeFunctorsSpec
       CaseSpec
+      CurryingSpec
+      DeriveSpec
       ForComprehensionsSpec
       HigherOrderFunctionsSpec
       NewTypeSpec

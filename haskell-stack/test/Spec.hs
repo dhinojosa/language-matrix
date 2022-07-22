@@ -4,6 +4,8 @@ module Main
 
 import qualified AlgebraicDataTypesSpec
 import qualified ApplicativeFunctorsSpec
+import qualified CurryingSpec
+import qualified DeriveSpec
 import qualified ForComprehensionsSpec
 import qualified HigherOrderFunctionsSpec
 import qualified NewTypeSpec
@@ -21,4 +23,6 @@ main = do
   _ <- runTestTT ApplicativeFunctorsSpec.testList
   _ <- runTestTT WhereSpec.testList
   _ <- runTestTT NewTypeSpec.testList
+  _ <- runTestTT CurryingSpec.testList
+  _ <- runTestTT DeriveSpec.testList
   runTestTT WHNFSpec.testList
