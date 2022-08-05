@@ -1,10 +1,10 @@
-name := "language-matrix-scala-dotty"
+name := "scala-dotty-sbt-language-matrix"
 
-version := "1.0-SNAPSHOT"
+version := "1.2"
 
 description := "Study and Presentation Material for Scala Dotty"
 
-scalaVersion := "3.0.0"
+scalaVersion := "3.1.3"
 
 fork := true
 
