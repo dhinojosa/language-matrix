@@ -1,12 +1,11 @@
 package com.evolutionnext.creatorapplications
 
-object CreatorApplicationsUsingJava extends App:
   /**
    * If the simple function works as stated then that also means that it would work with anything within the Java API
    */
-
+def creatorApplicationsInJava():Unit =
   import java.util.{ArrayList as JArrayList, List as JList}
-  import java.lang.{Integer as JInteger}
+  import java.lang.Integer as JInteger
 
   val xs = JArrayList[JInteger]()
   xs.add(30)

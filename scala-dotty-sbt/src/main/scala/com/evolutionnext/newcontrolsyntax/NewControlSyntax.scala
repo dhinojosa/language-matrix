@@ -1,6 +1,6 @@
 package com.evolutionnext.newcontrolsyntax
 
-@main def assertNewIfStatements: Unit =
+@main def assertNewIfStatements(): Unit =
   val x = 3
   val result =
     if x > 0 then "Positive"
@@ -8,14 +8,14 @@ package com.evolutionnext.newcontrolsyntax
     else "Zero"
   println(result)
 
-@main def assertNewWhileDo: Unit =
+@main def assertNewWhileDo(): Unit =
   var count = 0
   var done = 10
   while count <= done do
     count = count + 1
     println(count)
 
-@main def assertNewForDoForSideEffects: Unit =
+@main def assertNewForDoForSideEffects(): Unit =
   val xs = List(1, 2, 3)
   val ys = List('a', 'b', 'c')
   for
@@ -23,7 +23,7 @@ package com.evolutionnext.newcontrolsyntax
     y <- ys
   do println(x -> y)
 
-@main def assertNewForWithYield: Unit =
+@main def assertNewForWithYield(): Unit =
   val xs = List(1, 2, 3)
   val ys = List('a', 'b', 'c')
   val result = for
@@ -36,7 +36,7 @@ package com.evolutionnext.newcontrolsyntax
 /**
  * Source: Programming Scala 3, Dean Wampler
  */
-@main def assertNestedMatching: Unit =
+@main def assertNestedMatching(): Unit =
   val result =
     for opt <- Seq(Some(1), None)
     yield opt match

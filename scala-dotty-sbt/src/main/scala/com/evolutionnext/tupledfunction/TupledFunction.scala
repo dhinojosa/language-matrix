@@ -1,7 +1,7 @@
 package com.evolutionnext.tupledfunction
 
-object TupledFunction extends App:
-
+@main
+def usingTupledFunction():Unit =
   val fun = (a1: Int,
              a2: Int,
              a3: Int,
@@ -40,4 +40,4 @@ object TupledFunction extends App:
   val result = fun(25, 88, 192, 128, 52, 112, 63, 59, 108, 153, 20, 10, 195, 114, 77, 34, 115, 114, 171, 72, 164, 121,
     80, 67, 97, 165, 69, 119, 103, 120)
 
-  println(fun)
+  println(result)

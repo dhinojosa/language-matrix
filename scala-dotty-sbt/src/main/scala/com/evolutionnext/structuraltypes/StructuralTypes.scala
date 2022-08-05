@@ -8,6 +8,10 @@ package com.evolutionnext.structuraltypes
  */
 
 object WeatherFinder:
+
+  /**
+    *   Selectable is a marker trait!
+    */
   case class Record(attributes: (String, Any)*) extends Selectable:
     def selectDynamic(name: String): Any =
       println(s"finding $name")
@@ -26,6 +30,7 @@ object WeatherFinder:
       else Record("temperature" -> 80, "humidity" -> 7)
     result.asInstanceOf[Weather]
 
-object StructuralTypes extends App:
+@main
+def usingSelectable():Unit =
   val temp = WeatherFinder.findByCity("Atlanta").temperature
   println(s"Temperature in Atlanta is $temp")

@@ -18,15 +18,15 @@ object Logarithms:
     def +(y: Logarithm): Logarithm = Logarithm(math.exp(x) + math.exp(y))
     def *(y: Logarithm): Logarithm = Logarithm(x + y)
 
-@main def assertThatLogarithmOpaqueTypesWork: Unit =
+@main def assertThatLogarithmOpaqueTypesWork(): Unit =
   import Logarithms.*
-  //Supress the string append method
+  //Suppress the string append method
   import Predef.{any2stringadd as _, *}
 
   val a: Logarithm = Logarithm(30)
   val b: Logarithm = Logarithm(1)
   println(a + b)
 
-//This should not work since the opaque type can
-//only happen within the object Logarithms
-//val c:Logarithm = 40.0
+  //This should not work since the opaque type can
+  //only happen within the object Logarithms
+  //val c:Logarithm = 40.0

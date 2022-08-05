@@ -4,7 +4,7 @@ package com.evolutionnext.multiversalequality
 //will define whether something is equal or not based on types
 import scala.language.strictEquality
 
-@main def testMultiversalEquality: Unit =
+@main def testMultiversalEquality(): Unit =
 
   //All things are equal of the same type
   //Byte, Short, Char, Int, Long, Float, Double,
@@ -19,7 +19,7 @@ import scala.language.strictEquality
   //then you would need to declare
 
   given CanEqual[Int, String] = CanEqual.derived
-  println(3 == "3") //false, but type system
+  println(3 == "3") //false, but type system allows it
 
   // By default, all numbers are comparable, because of;
   //implicit def CanEqualNumber: CanEqual[Number, Number] = derived
@@ -48,5 +48,6 @@ import scala.language.strictEquality
 
   given CanEqual[Rate, Rate] = CanEqual.derived
 
-  //If there are are some comparisions in scope then sequences of that type can be compared
+  //If there are are some comparisons in scope
+  //then sequences of that type can be compared
   println(List(Rate(10), Rate(40), Rate(12)) == List(Rate(10), Rate(40), Rate(12)))
