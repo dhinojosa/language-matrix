@@ -7,25 +7,27 @@ object ExplicitNulls:
   //reference types non-nullable. The following is not achievable
   //with the flag turned on. Which it is:
 
-  val m = null
+  val m: Null = null
 
-  extension [A](x: (A | Null)) def toOption = if x == null then Option.empty[A] else Some(x.asInstanceOf[A])
-
-  def testInputWithNull: Unit =
-    val input: String | Null = "Hello"
-    println(input.toOption.map(_ + "!"))
+  extension [A](x: A | Null) def toOption = if x == null then Option.empty[A] else Some(x.asInstanceOf[A])
 
 import com.evolutionnext.explicitnulls.ExplicitNulls.*
 
-@main def dateNow: Unit =
+
+@main
+def testInputWithNull(): Unit =
+  val input: String | Null = "Hello"
+  println(input.toOption.map(_ + "!"))
+
+@main def dateNow(): Unit =
   val dateNow: LocalDate | Null = LocalDate.now
   println(dateNow.toOption)
 
-@main def dateNowFailed: Unit =
+@main def dateNowFailed(): Unit =
   val dateNowFailed: LocalDate | Null = null
   println(dateNowFailed.toOption)
 
-@main def testConvertArraysField: Unit =
+@main def testConvertArraysField(): Unit =
   val arraysField: Array[String | Null] | Null = "One, Two, Three".split(", ")
   val arraysFieldOption: Option[Array[String | Null]] = arraysField.toOption
   val nextStep: Option[Array[String]] = arraysFieldOption.map(arr => arr.flatMap(_.toOption))
