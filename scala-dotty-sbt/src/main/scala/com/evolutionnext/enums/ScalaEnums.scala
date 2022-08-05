@@ -12,8 +12,8 @@ enum ScalaSuit:
 
 enum ScalaPlanet(val mass: Double, val radius: Double):
   final private val G = 6.67300e-11
-  def surfaceGravity = G * mass / (radius * radius)
-  def surfaceWeight(otherMass: Double) = otherMass * surfaceGravity
+  def surfaceGravity: Double = G * mass / (radius * radius)
+  def surfaceWeight(otherMass: Double): Double = otherMass * surfaceGravity
 
   case Mercury extends ScalaPlanet(3.303e+23, 2.4397e6)
   case Venus extends ScalaPlanet(4.869e+24, 6.0518e6)

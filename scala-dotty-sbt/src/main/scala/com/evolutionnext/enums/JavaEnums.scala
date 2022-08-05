@@ -1,6 +1,6 @@
 package com.evolutionnext.enums
-// This JavaEnums is using Java like declarations
 
+// This Java enums is using Java like declarations
 enum JavaColor extends java.lang.Enum[JavaColor]:
   case Red, Green, Blue
 
@@ -12,8 +12,8 @@ enum JavaSuit extends java.lang.Enum[JavaSuit]:
 
 enum JavaPlanet(val mass: Double, val radius: Double) extends java.lang.Enum[JavaPlanet]:
   final private val G = 6.67300e-11
-  def surfaceGravity = G * mass / (radius * radius)
-  def surfaceWeight(otherMass: Double) = otherMass * surfaceGravity
+  def surfaceGravity: Double = G * mass / (radius * radius)
+  def surfaceWeight(otherMass: Double): Double = otherMass * surfaceGravity
 
   case Mercury extends JavaPlanet(3.303e+23, 2.4397e6)
   case Venus extends JavaPlanet(4.869e+24, 6.0518e6)

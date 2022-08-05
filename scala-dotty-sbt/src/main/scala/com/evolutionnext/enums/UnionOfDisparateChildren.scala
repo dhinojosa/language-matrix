@@ -18,7 +18,7 @@ type FirstChildren = ZoneA.ChildA1 | ZoneB.ChildB1
 object UnionOfDisparateChildren extends App:
   def logStatus(x: FirstChildren): String =
     x match
-      case ZoneA.ChildA1(x) => s"ChildA1 $x"
-      case ZoneB.ChildB1(x) => s"ChildB1 $x"
+      case ZoneA.ChildA1(x) => s"ChildA1 with $x"
+      case ZoneB.ChildB1(x) => s"ChildB1 with $x"
   val candidate = new ZoneB.ChildB1(12)
-  logStatus(candidate)
+  println(logStatus(candidate))
