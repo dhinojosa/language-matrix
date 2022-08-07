@@ -12,11 +12,12 @@ object UsingClausesList:
   given u1i: U1[Int] = U1[Int](0)
   given u2s: U2[String] = U2[String]("one")
 
-  @main def testClauses: Unit =
-    println(f1("f1a"))
-    println(f1("f1b")(using u1i, u2s))
-    f2("f2a")
-    println(f2("f2b")(using u1i)(using u2s))
-    println(f3("f3a"))
-    println(f3("f3b")(using u1i))
-    println(f3("f3c")(using u1i)(u2s))
+@main def testClauses(): Unit =
+  import UsingClausesList.{given, *}
+  println(f1("f1a"))
+  println(f1("f1b")(using u1i, u2s))
+  println(f2("f2a"))
+  println(f2("f2b")(using u1i)(using u2s))
+  println(f3("f3a"))
+  println(f3("f3b")(using u1i))
+  println(f3("f3c")(using u1i)(u2s))

@@ -24,7 +24,8 @@ enum JavaPlanet(val mass: Double, val radius: Double) extends java.lang.Enum[Jav
   case Uranus extends JavaPlanet(8.686e+25, 2.5559e7)
   case Neptune extends JavaPlanet(1.024e+26, 2.4746e7)
 
-object JavaEnums extends App:
+@main
+def usingEnums():Unit =
   import JavaPlanet.*
   val m = JavaColor.Red
   println(m)
@@ -32,3 +33,8 @@ object JavaEnums extends App:
   println(g == g)
   val planet = Mars
   println(planet)
+
+  //Using it from a Java Definition
+  import com.evolutionnext.enums.Planet
+  val jupiter = Planet.JUPITER
+  print(jupiter)

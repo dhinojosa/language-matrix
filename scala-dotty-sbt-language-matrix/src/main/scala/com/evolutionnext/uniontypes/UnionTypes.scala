@@ -24,7 +24,9 @@ object UnionTypes:
         .map(LoginSuccess.apply)
         .getOrElse(LoginFailure("Can't get local date"))
 
-  @main def testUnionTypes(): Unit =
-    println(login("Alex Morgan"))
-    println(login(""))
-    println(matchItUp(login("Megan Rapinoe")))
+@main
+def testUnionTypes(): Unit =
+  import UnionTypes.*
+  println(login("Alex Morgan"))
+  println(login(""))
+  println(matchItUp(login("Megan Rapinoe")))

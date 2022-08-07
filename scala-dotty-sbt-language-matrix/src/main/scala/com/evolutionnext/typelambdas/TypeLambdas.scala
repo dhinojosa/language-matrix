@@ -47,7 +47,7 @@ object TypeLambdas extends App:
    */
   val a: F2 = new F2:
     def point[Int](x: Int): Either[String, Int] = Right(x)
-    def bind[Int](x: Int)(f: Int => Either[String, Int]) = f(x)
+    def bind[Int](x: Int)(f: Int => Either[String, Int]): Either[String, Int] = f(x)
 
   /**
    * But where we can mainly use it is in a method where it is required, and some of the other types are unknown.
@@ -64,6 +64,6 @@ object TypeLambdas extends App:
 
   val b: F3 = new F3:
     def point[Int](x: Int): Either[String, Int] = Right(x)
-    def bind[Int](x: Int)(f: Int => Either[String, Int]) = f(x)
+    def bind[Int](x: Int)(f: Int => Either[String, Int]): Either[String, Int] = f(x)
 
   def bar[M[_, _], A](x: Monad[[A] =>> Either[String, A]])(y: A) = x.bind(y)

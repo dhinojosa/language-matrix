@@ -11,6 +11,7 @@ enum Tree[T]:
  * enum Tree[+T] {
  *   case Branch(left: Tree[T], right: Tree[T]) extends Tree[T]
  *   case Leaf(value: T) extends Tree[T]
+ *   case Empty
  * }
  *
  * If we had an object that represented Nothing it would work and it

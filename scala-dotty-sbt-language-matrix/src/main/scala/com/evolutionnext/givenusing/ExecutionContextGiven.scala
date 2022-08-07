@@ -13,11 +13,11 @@ object ExecutionContextGiven:
   given ec: ExecutionContext =
     ExecutionContext.fromExecutor(Executors.newFixedThreadPool(8).notNull)
 
-  val future = Future.apply {
+  val future: Future[Int] = Future.apply {
     import com.evolutionnext.explicitnulls.ExplicitNulls.given
     val thread: Thread | Null = Thread.currentThread()
     val option: Option[Thread] = thread.toOption
-    option.foreach(t => println(s"Thread-name: ${t.getName()}"));
+    option.foreach(t => println(s"Thread-name: ${t.getName}"));
     Thread.sleep(3000)
     50 + 100
   }

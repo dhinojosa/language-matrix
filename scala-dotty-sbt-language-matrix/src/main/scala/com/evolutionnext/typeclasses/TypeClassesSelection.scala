@@ -12,7 +12,7 @@ object MyPredef:
   given showArtistLastThenFirst: AShow[Artist] = new AShow[Artist]:
     def show(a: Artist): String = s"Artist(${a.lastName}, ${a.firstName})"
 
-@main def testTypeClassSelection: Unit =
+@main def testTypeClassSelection(): Unit =
   import MyPredef.showArtistLastThenFirst
   val result: String = summon[AShow[Artist]].show(Artist("Lashana", "Lynch"))
   println(result)
