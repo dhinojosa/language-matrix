@@ -17,7 +17,7 @@
         <junit.platform.version>1.2.0</junit.platform.version>
         <maven-surefire-report-plugin.version>2.21.0
         </maven-surefire-report-plugin.version>
-        <jackson.version>2.13.3</jackson.version>
+        <jackson.version>2.13.4.2</jackson.version>
     </properties>
 
     <dependencyManagement>
