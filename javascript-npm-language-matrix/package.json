@@ -24,6 +24,6 @@
     },
     "homepage": "https://github.com/dhinojosa/language-matrix/javascript-npm-language-matrix#readme",
     "devDependencies": {
-        "mocha": "^9.0.3"
+        "mocha": "^9.2.2"
     }
 }
